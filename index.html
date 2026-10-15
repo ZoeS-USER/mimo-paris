@@ -1,0 +1,810 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mimo在巴黎散步的天</title>
+<style>
+body{margin:0;background:#e8e9e1;font-family:system-ui,sans-serif;color:#34483b} .shell{max-width:970px;margin:35px auto;display:flex;gap:55px;align-items:flex-start;justify-content:center;padding:20px}.intro{max-width:315px;padding-top:55px}.intro h1{font-size:35px;line-height:1.4}.intro p{line-height:1.8;font-size:15px;color:#657362}.pill{font-size:12px;letter-spacing:2px;color:#587b5d}.phone{width:375px;max-width:100%;background:#f7f3ea;border:8px solid #fffdf8;border-radius:35px;box-shadow:0 18px 60px #52634b22;overflow:hidden;flex-shrink:0}.nav{height:55px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-bottom:1px solid #e9e7df;font-size:13px}.nav button{border:0;background:transparent;color:#536c57;cursor:pointer}.screen{height:680px;overflow:auto}.tabs{height:60px;display:flex;background:#fffdf8;border-top:1px solid #e9e7df}.tabs button{flex:1;border:0;background:transparent;color:#7e8175;font-size:13px;cursor:pointer}.tabs .selected{color:#315e4b;font-weight:700}.preview-note{font-size:12px;color:#86907d}#toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#314c3deb;color:white;padding:14px 22px;border-radius:14px;z-index:100;max-width:85vw;font-size:14px;display:none} .intro button{border:1px solid #c1cdbc;padding:10px 15px;background:transparent;border-radius:14px;color:#59725a;cursor:pointer}.screen button{cursor:pointer;font-family:inherit}.screen button:disabled{cursor:default}.screen button:hover{filter:brightness(.97)}.screen span{display:inline} .screen .block{display:contents}.nav strong{font-size:11px}.screen input{font-family:inherit;outline:none}.screen img{height:auto}.nav strong{font-size:11px}.screen input{font-family:inherit;outline:none}.screen img{height:auto}@media(max-width:760px){.shell{margin:0;display:block;padding:12px}.intro{padding-top:0;max-width:375px;margin:0 auto}.intro h1{font-size:23px;margin:8px 0}.intro p{font-size:13px;margin:8px 0}.phone{margin:18px auto;box-sizing:border-box;width:391px}.screen{height:65vh;min-height:460px}.intro button{padding:6px 12px}}
+button{border:0}
+.screen { background: #f7f3ea; color: #303d34; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.6; }
+view, button { box-sizing: border-box; }
+button { font-size: 14px; line-height: 1.5; border-radius: 12px; margin: 0; }
+button::after { border: none; }
+button[disabled] { background: #d9ded3 !important; color: #7a8479 !important; }
+.page { padding: 18px 16px 27px; }
+.eyebrow { color: #738671; font-size: 10.5px; letter-spacing: 1.5px; margin: 8px 0; }
+.title { font-size: 21.5px; line-height: 1.4; font-weight: 700; letter-spacing: -0.5px; }
+.subtitle { color: #7c8074; font-size: 12.5px; margin: 7px 0 13px; }
+.muted { color: #7c8074; font-size: 12px; }
+.tiny { font-size: 10.5px; margin: 8px 0; }
+.bold, .section-title { font-weight: 600; }
+.section-title { font-size: 15px; }
+.section-head { display: flex; justify-content: space-between; align-items: center; margin: 16px 0 11px; gap: 7px; }
+.primary, .secondary { padding: 12px; width: 100%; margin: 12px 0 0; font-weight: 600; }
+.primary { background: #315e4b; color: #fffdf8; }
+.secondary { background: #e9e9dd; color: #315e4b; }
+.share, .text-button { background: transparent; color: #617763; font-size: 12.5px; padding: 11px 6px; }
+.share { border: 1px solid #dadfd1; margin-top: 12px; border-radius: 11px; }
+.guide { background: #ebeede; border-radius: 13px; display: flex; align-items: center; gap: 12px; padding: 12px; margin: 14px 0; }
+.guide-copy { font-size: 12px; color: #62705a; flex: 1; }
+.guide-copy .bold { color: #3d5743; margin-bottom: 2.5px; }
+.cat { width: 45px; height: 47.5px; position: relative; flex-shrink: 0; }
+.face { position: absolute; top: 9px; left: 0; width: 44px; height: 33px; border-radius: 17.5px; background: #e8bd82; text-align: center; color: #4e4238; font-weight: bold; line-height: 33px; font-size: 16px; z-index: 1; }
+.ear { position: absolute; top: 3px; width: 15.5px; height: 17.5px; background: #e8bd82; border-radius: 2.5px; transform: rotate(15deg); }
+.ear.left { left: 1.5px; }.ear.right { right: 1.5px; transform: rotate(-15deg); }
+.scarf { position: absolute; bottom: 0; left: 7.5px; width: 32px; height: 9.5px; background: #68896d; border-radius: 4px; }
+.map { height: 380px; position: relative; overflow: hidden; border: 1px solid #e1ded0; border-radius: 17px; background: #efe8d6; }
+.map-heading { position: absolute; top: 14px; left: 15px; letter-spacing: 3px; font-size: 14.5px; color: #706b58; z-index: 3; }
+.map-heading span { display: block; font-size: 10px; letter-spacing: 1px; }
+.road { position: absolute; background: #fff9eb; box-shadow: 0 0 0 1px #e1d9c5; }
+.road-one { width: 130%; height: 19px; top: 140px; left: -35px; transform: rotate(-26deg); }
+.road-two { height: 110%; width: 14px; top: -5px; left: 185px; transform: rotate(22deg); }
+.road-three { width: 110%; height: 11px; top: 290px; left: -5px; transform: rotate(12deg); }
+.park { position: absolute; background: #d5dec2; border-radius: 19px; }.park-one { width: 80px; height: 80px; left: 15px; top: 120px; transform: rotate(-12deg); }.park-two { width: 75px; height: 90px; right: 15px; bottom: 47.5px; transform: rotate(16deg); }
+.river { position: absolute; height: 49px; width: 120%; left: -10%; top: 180px; transform: rotate(-20deg); background: #b9d5d3; border-top: 4px solid #d5e6df; border-bottom: 4px solid #d5e6df; border-radius: 45%; }
+.river-label { position: absolute; top: 203px; left: 115px; transform: rotate(-20deg); color: #618c91; font-size: 10px; }
+.landmark { position: absolute; left: 18px; top: 62.5px; color: #a58b68; text-align: center; }.landmark span { display: block; font-size: 9.5px; }.eiffel { height: 50px; width: 40px; position: relative; margin: auto; }.eiffel::before { content: ''; position: absolute; top: 0; left: 10px; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 37.5px solid #a58b68; }.eiffel-deck { position: absolute; top: 31px; left: 4px; width: 32px; height: 4px; background: #a58b68; }.eiffel-leg { position: absolute; width: 5px; height: 17.5px; top: 33.5px; background: #a58b68; }.leg-left { left: 8px; transform: rotate(26deg); }.leg-right { right: 8px; transform: rotate(-26deg); }
+.route { position: absolute; height: 2.5px; border-top: 2.5px dashed #84987f; transform-origin: left center; }.route-one { width: 145px; top: 281px; left: 110px; transform: rotate(-65deg); }.route-two { width: 117.5px; top: 130px; left: 197.5px; transform: rotate(57deg); }
+.map-pin { position: absolute; width: 108px; padding: 7px 3.5px; background: #fffdf6; color: #455942; border: 1px solid #d4d9c5; border-radius: 12.5px; z-index: 3; box-shadow: 0 3px 0 #dcd5c3; font-size: 12px; line-height: 1.6; }
+.pin-0 { left: 25px; top: 237.5px; }.pin-1 { right: 67.5px; top: 78.5px; }.pin-2 { right: 13.5px; top: 238px; }
+.pin-icon { font-size: 21.5px; line-height: 1.3; }.pin-state { font-size: 10px; color: #73836b; }.locked { background: #e9e6dc; color: #888778; }.current { border: 1.5px solid #638468; }
+.mimo-marker { position: absolute; z-index: 4; text-align: center; }.mimo-marker .cat { transform: scale(.65); transform-origin: top center; height: 33px; }.mimo-marker span { display: block; font-size: 9.5px; color: #58654d; background: #fffbef; border-radius: 6px; }.marker-0 { left: 52.5px; top: 320px; }.marker-1 { right: 103px; top: 155px; }.marker-2 { right: 51px; top: 320px; }
+.map-note { font-size: 9px; color: #8d8979; margin: 6px 3px; }
+.scene-row { display: flex; align-items: center; padding: 11px 0; gap: 10px; border-bottom: 1px solid #e8e4d8; }.scene-emoji { width: 43px; height: 43px; line-height: 43px; text-align: center; border-radius: 12px; font-size: 20px; flex-shrink: 0; }.row-copy { flex: 1; }.row-copy .muted { font-size: 10.5px; }.tag { font-size: 11px; color: #658266; }
+.cafe { background: #eedac1; }.market { background: #dde5ca; }.metro { background: #d4e0e2; }
+.scene-stage { height: 155px; border-radius: 15px; overflow: hidden; position: relative; margin-bottom: 14px; }.stage-sun { position: absolute; width: 36.5px; height: 36.5px; top: 17.5px; right: 40px; background: #fcf4d9; border-radius: 50%; }.stage-building { position: absolute; left: 31px; bottom: 21px; width: 175px; height: 95px; background: #faf1de; border-radius: 45px 45px 4px 4px; }.awning { position: absolute; width: 100%; height: 18.5px; top: 30px; background: repeating-linear-gradient(90deg, #8b9a76 0, #8b9a76 17.5px, #f5ecda 17.5px, #f5ecda 35px); border-radius: 2.5px; }.window { position: absolute; bottom: 3px; left: 37.5px; width: 100px; height: 45px; background: #d8cab1; text-align: center; font-size: 30px; border-radius: 27.5px 27.5px 0 0; }.shop-name { position: absolute; top: 12.5px; width: 100%; text-align: center; font-size: 10.5px; letter-spacing: 1.5px; color: #5b6e51; }.stage-cat { position: absolute; bottom: 18px; right: 27.5px; font-size: 45px; }.stage-place { position: absolute; bottom: 4.5px; left: 13.5px; font-size: 10.5px; color: #65735e; }
+.story { background: #ebeede; padding: 12px; border-radius: 11px; color: #617059; line-height: 1.8; margin-bottom: 12px; }
+.card, .phrase-card { background: #fffdf8; border: 1px solid #e7e2d5; border-radius: 13.5px; padding: 14px; margin: 10px 0; }.phrase-top { display: flex; align-items: flex-start; gap: 6px; }.french { font-size: 17px; color: #315e4b; line-height: 1.5; flex: 1; overflow-wrap: break-word; }.save-button { background: transparent; color: #a88b49; padding: 0; width: 31px; min-width: 31px; height: 31px; font-size: 19.5px; line-height: 1.2; }.translation { font-size: 13.5px; margin: 6px 0; }.phrase-card .muted { margin-top: 6px; }
+.word-list { display: flex; flex-wrap: wrap; gap: 7px; }.word-chip { background: #e9ebdd; padding: 7.5px 10px; color: #526847; border-radius: 9.5px; font-size: 12.5px; text-align: left; }
+.culture { border-left: 2.5px solid #bfa774; padding: 2.5px 0 2.5px 12px; margin: 17.5px 0; font-size: 12.5px; color: #756c55; }.culture .eyebrow { color: #a18959; letter-spacing: 0.5px; }
+.choice { width: 100%; text-align: left; padding: 11px; border: 1px solid #e1e2d6; background: #f8f7ef; color: #455442; margin: 9px 0; font-size: 14px; }.choice.right { background: #e4eedc; border-color: #749570; }.choice.wrong { background: #f4e2d5; border-color: #c19778; }.feedback { color: #607758; margin: 10px 0; }
+.success, .empty { text-align: center; }.empty { padding: 32.5px 8px; }.big-icon { font-size: 36px; }.filters { display: flex; gap: 7px; margin: 15px 0; }.filter { font-size: 12.5px; padding: 7px 15px; background: #e9e8dc; color: #7c8074; }.filter.active { background: #315e4b; color: #fff; }.source-button { background: #eef0e4; color: #6d8063; margin-top: 11.5px; padding: 7px; font-size: 11.5px; text-align: left; }
+.review-number { color: #315e4b; font-size: 50px; font-weight: 600; line-height: 1.4; }.review-card { min-height: 175px; text-align: center; padding: 20px 14px; }.prompt { font-size: 19.5px; margin: 15px 0; }.review-card .french { margin-bottom: 10px; }.review-actions { display: flex; gap: 8px; }.review-actions button { flex: 1; }
+/* 第二版：短屏地图、一屏一轮对话、挖空拼写。 */
+.short-page { padding: 11px 14px 13px; }
+.short-page .title { font-size: 18.5px; }
+.short-page .eyebrow { margin: 4px 0 6px; }
+.compact-guide { padding: 6.5px 9.5px; margin: 8px 0; gap: 7px; }
+.compact-guide .cat { transform: scale(.62); transform-origin: left center; width: 31.5px; height: 33px; }
+.compact-guide .guide-copy { font-size: 10.5px; }
+.compact-map { height: 310px; }
+.compact-map .map-heading { top: 10px; left: 12.5px; font-size: 12px; }
+.compact-map .map-heading span { display: inline; margin-left: 8px; font-size: 9px; letter-spacing: 0.5px; }
+.compact-map .river { top: 145px; height: 37.5px; }
+.compact-map .river-label { top: 152.5px; left: 160px; }
+.compact-map .map-pin { width: 93px; font-size: 11.5px; line-height: 1.3; padding: 5px 2.5px; border-radius: 9px; }
+.compact-map .pin-icon { font-size: 15.5px; }
+.compact-map .pin-state { font-size: 8.5px; margin-top: 2.5px; }
+.done-pin { background: #e8efde; border-color: #7b9e75; }
+.compact-head { margin: 4px 0 7px; }
+.round-progress { height: 3.5px; border-radius: 4.5px; background: #e1e5d7; overflow: hidden; margin-bottom: 9px; }
+.round-progress view { height: 100%; background: #7a9b73; transition: width .25s; }
+.dialogue { background: #fffdf8; border: 1px solid #e4e1d5; border-radius: 11.5px; padding: 10px 11.5px; margin: 8px 0; }
+.dialogue.mimo { background: #e7eddb; border-color: #d9e0cb; margin-left: 14px; }
+.dialogue.other { margin-right: 14px; }
+.dialogue .french, .cloze { font-size: 16px; line-height: 1.5; }
+.dialogue .translation { font-size: 11.5px; margin: 4px 0 0; }
+.speaker { display: flex; align-items: center; font-size: 10.5px; color: #78876b; gap: 6px; margin-bottom: 5px; }
+.speaker .save-button { font-size: 15px; width: 21px; min-width: 21px; height: 18px; }
+.sound { background: transparent; color: #5d7a5b; padding: 2px 6px; font-size: 11px; margin-left: auto; }
+.inline-actions { display: flex; gap: 6px; align-items: center; }
+.inline-actions button { flex: 1; margin-top: 6px; }
+.inline-actions .text-button { font-size: 11px; padding: 7.5px 2px; }
+.short-page .primary, .short-page .secondary { padding: 9.5px 7px; margin-top: 7px; }
+.spell-panel { background: #fffdf8; border-radius: 11px; padding: 9.5px 11px; border: 1px solid #e3e4d6; }
+.spell-input { width: 100%; box-sizing: border-box; height: 39px; background: #f2f2e9; border-radius: 7px; padding: 7px 9px; margin-top: 6px; font-size: 15.5px; color: #315e4b; border: 1px solid #cdd8c5; }
+.accent-row { display: flex; gap: 3px; margin: 6px 0 0; }
+.accent-row button { flex: 1; font-size: 12px; background: #e9eddf; color: #4a6b50; border-radius: 4px; padding: 3.5px 0; }
+.spell-feedback { font-size: 11.5px; color: #75865f; min-height: 15.5px; margin-top: 4px; }
+.blank { border-bottom: 1.5px solid #79966e; color: #79966e; padding: 0 4px; }
+.cloze { color: #315e4b; margin: 6.5px 0; }
+.short-page .culture { padding: 5px 7.5px; margin: 6px 0; font-size: 11.5px; }
+.poster-image { display: block; width: 100%; border-radius: 11px; margin: 8px 0 4px; }
+.poster-canvas { position: fixed; left: -2000px; top: 0; width: 600px; height: 800px; }
+.poster-loading { text-align: center; padding: 55px 7.5px; color: #6e8363; }
+
+/* 可拖动的巴黎街区地图。 */
+.explore-shell { position: relative; height: 325px; border: 1px solid #dedfce; border-radius: 14px; overflow: hidden; background: #ede6d3; }
+.map-window { display: block; position: relative; width: 100%; height: 325px; overflow: hidden; touch-action: none; }
+.map-mover { display: block; position: absolute; top: 0; left: 0; }
+.paris-world { position: relative; width: 900px; height: 750px; transform-origin: 0 0; overflow: hidden; background: #eee7d3; }
+.city-block { position: absolute; width: 77.5px; height: 77.5px; background: #e2d7bd; border-radius: 8px; border: 4px solid #e8dfcb; transform: rotate(-16deg); }
+.city-block::before { content: ''; position: absolute; top: 17.5px; left: 15px; width: 7px; height: 12px; background: #c5bea4; box-shadow: 17px 0 #c5bea4, 0 21px #c5bea4, 17px 21px #c5bea4; }
+.city-park { position: absolute; background: #cddbb9; border: 7px solid #dce4c9; border-radius: 35px; }
+.garden-one { left: 120px; top: 510px; width: 195px; height: 175px; transform: rotate(12deg); }.garden-two { left: 630px; top: 450px; width: 190px; height: 150px; transform: rotate(-16deg); }.garden-three { left: 205px; top: 165px; width: 155px; height: 105px; }
+.avenue { position: absolute; background: #fff9e9; border: 1.5px solid #e1d7bf; }
+.avenue-one { left: -65px; top: 265px; width: 1050px; height: 27.5px; transform: rotate(-27deg); }.avenue-two { left: 405px; top: -35px; width: 26px; height: 875px; transform: rotate(22deg); }.avenue-three { left: -70px; top: 555px; width: 1100px; height: 25px; transform: rotate(10deg); }.avenue-four { left: 105px; top: -35px; width: 18.5px; height: 900px; transform: rotate(-15deg); }.avenue-five { left: 575px; top: -25px; width: 20px; height: 875px; transform: rotate(12deg); }
+.city-seine { position: absolute; top: 350px; left: -85px; width: 1075px; height: 75px; transform: rotate(-20deg); border-radius: 40%; background: #a8cecf; border-top: 5px solid #c7dfd6; border-bottom: 5px solid #c7dfd6; }
+.seine-name { position: absolute; left: 412.5px; top: 372.5px; color: #659499; font-size: 13.5px; transform: rotate(-20deg); font-style: italic; }
+.city-bridge { position: absolute; width: 20.5px; height: 95px; background: #f1e9d1; border: 2.5px solid #b5b799; transform: rotate(-20deg); }.bridge-one { left: 365px; top: 360px; }.bridge-two { left: 555px; top: 292.5px; }
+.district { position: absolute; font-size: 11px; color: #a19b80; letter-spacing: 2.5px; }.district-one { left: 197.5px; top: 360px; transform: rotate(-15deg); }.district-two { left: 555px; top: 197.5px; }.district-three { left: 265px; top: 680px; }
+.city-tower { position: absolute; left: 52.5px; top: 575px; color: #a58b68; text-align: center; font-size: 10px; }.city-tower span { display: block; margin-top: 5px; }
+.city-pin { width: 83px; padding: 5.5px 2.5px; border-radius: 12px; line-height: 1.4; font-size: 12px; border-width: 1.5px; user-select: none; }
+.city-pin .pin-icon { font-size: 20.5px; line-height: 1.3; }.city-pin .pin-state { font-size: 9px; }
+.walking-cat { position: absolute; z-index: 4; text-align: center; pointer-events: none; }.walking-cat .cat { transform: scale(.7); height: 35.5px; transform-origin: top center; }.walking-cat span { display: block; background: #fffaed; color: #5c7357; font-size: 9px; border-radius: 5px; }
+.map-badge { position: absolute; top: 9px; left: 10px; padding: 4.5px 8px; background: #fffaf0eb; border-radius: 7px; font-size: 11.5px; letter-spacing: 2px; color: #77755e; pointer-events: none; }.map-badge span { font-size: 9px; letter-spacing: 0.5px; margin-left: 5px; }.map-compass { position: absolute; right: 10.5px; top: 11px; color: #617963; background: #fffaf0df; border-radius: 50%; font-size: 10px; padding: 5.5px; pointer-events: none; }
+.map-tools { position: absolute; right: 9px; bottom: 10px; display: flex; flex-direction: column; gap: 3.5px; }.map-tool { width: 32.5px; height: 32.5px; background: #fffdf4f5; color: #597653; border: 1px solid #d8ddcb; border-radius: 7.5px; font-size: 18.5px; padding: 0; line-height: 30.5px; }.locate-tool { font-size: 14.5px; margin-top: 2.5px; }
+.find-place { position: absolute; bottom: 10px; left: 10px; font-size: 11.5px; background: #fffdf4f5; color: #5a7152; border: 1px solid #d8ddcb; padding: 7.5px 11.5px; border-radius: 8px; }
+.places-menu { position: absolute; left: 8px; bottom: 50px; right: 51px; background: #fffdf5f8; border: 1px solid #d8ddcb; border-radius: 10px; padding: 7.5px; display: flex; flex-wrap: wrap; gap: 4px; z-index: 8; box-shadow: 0 2.5px 10px #5b67431a; }.places-menu button { width: 31%; background: #edf0e3; font-size: 10.5px; padding: 7px 1px; border-radius: 5px; color: #5d7655; }
+.map-gesture-hint { text-align: center; font-size: 10.5px; color: #7e8a71; margin: 6px 0 0; }
+.map-badge, .map-compass { z-index: 6; }
+.map-tools, .find-place { z-index: 7; }
+.map-tools { width: 32px; }
+.map-tools .map-tool { display: flex; align-items: center; justify-content: center; width: 32px; min-width: 0; height: 32px; min-height: 0; padding: 0; margin: 0; line-height: 1; font-size: 16px; flex: none; }
+.map-tools .locate-tool { font-size: 12.5px; margin-top: 2px; }
+.compact-guide .sound-toggle { width: 34px; min-width: 34px; flex: none; padding: 0; }
+.explore-shell .find-place { width: auto; min-width: 0; }
+
+.word-rescue { background: #f1f0e1; border-radius: 8.5px; padding: 9px; margin: 6px 0; }
+.rescue-heading { color: #607957; font-size: 11.5px; }
+.rescue-word { font-size: 19.5px; font-weight: 600; color: #315e4b; letter-spacing: 1px; margin: 4px 0; overflow-wrap: break-word; }
+.memory-parts { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 6px; }
+.memory-parts span { background: #fffdf3; color: #55734f; border: 1px solid #d6dfc8; border-radius: 4px; padding: 2px 6.5px; font-size: 12.5px; }
+.memory-tip { font-size: 11.5px; color: #6d785b; }
+.letter-comparison { display: flex; flex-wrap: wrap; gap: 3px; margin: 5px 0; }
+.letter-check { min-width: 17.5px; padding: 2px 3.5px; background: #e1ebd5; color: #57764e; border-radius: 3.5px; text-align: center; font-size: 13px; }
+.letter-check span { display: block; }
+.letter-check .letter-state { font-size: 8px; }
+.wrong-letter { background: #f3decd; color: #9a674d; }
+.study-note { border-left: 2px solid #a1b58b; background: #eef0e2; border-radius: 5px; padding: 8.5px 10px; font-size: 12px; color: #627653; }
+
+.scene-page { position: relative; padding: 0; min-height: 100vh; overflow: hidden; }
+.scene-background { position: absolute; inset: 0; pointer-events: none; }
+.scene-background-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.scene-background-wash { position: absolute; inset: 0; background: linear-gradient(180deg, #f7f3e817, #f7f3e83d); }
+.scene-content { position: relative; z-index: 1; padding: 11px 14px 14px; min-height: 100vh; }
+.scene-content .compact-head { background: #fffaf1ec; padding: 6.5px 9.5px; border-radius: 8.5px; }
+.scene-content .dialogue { background: #fffdf6f2; box-shadow: 0 2px 8px #5263490d; }
+.scene-content .dialogue.mimo { background: #e8efddf5; }
+.scene-content .spell-panel { background: #fffdf6f5; }
+.scene-content .inline-actions { background: #fffaf0e8; border-radius: 7px; margin-top: 6px; padding: 0 4.5px; }
+.scene-content .inline-actions button { margin: 0; }
+.scene-arrival { height: 150px; position: relative; }
+.arrival-place { display: inline-block; margin-top: 4px; padding: 4px 10px; color: #5b7657; background: #fffaf0e6; border-radius: 6.5px; font-size: 11.5px; }
+.arrival-cat { position: absolute; bottom: 9px; right: 8px; transform: scale(1.1); }
+.arrival-copy { padding: 12.5px; border-radius: 12.5px; background: #fffaf0ed; box-shadow: 0 3px 10px #6171500f; }
+.arrival-copy .subtitle { margin: 6px 0; }
+.swipe-hint { text-align: center; color: #7b8b69; font-size: 10.5px; margin-top: 7px; }
+.sound-toggle { background: #ffffffa6; color: #607b58; font-size: 11.5px; padding: 4.5px 6.5px; border: 1px solid #d4dec9; border-radius: 6.5px; min-width: 28.5px; }
+
+
+.screen .scene-page,.screen .scene-content{min-height:100%}.screen .scene-background-image{height:100%;object-fit:cover}
+
+html,body{height:100%;overflow:hidden;background:#ecefe5}body{min-width:300px}.shell{display:block;margin:0 auto;padding:0;max-width:480px;height:100%;height:100dvh}.phone{display:flex;flex-direction:column;width:100%;max-width:none;height:100%;margin:0;border:0;border-radius:0;box-shadow:0 0 60px #45604412;box-sizing:border-box}.nav{flex:none;height:52px;padding:env(safe-area-inset-top,0px) 14px 0}.nav strong{font-size:12px}.nav button{padding:8px}.screen{flex:1;height:auto;min-height:0;overflow:auto;overscroll-behavior:contain}.tabs{flex:none;height:58px;padding-bottom:env(safe-area-inset-bottom,0px)}.tabs button{font-family:inherit}.screen .page{padding:18px 16px}.screen .explore-shell{height:clamp(270px,47dvh,390px)}.screen .map-window{height:100%}.screen .map-tool{width:34px;height:34px}.screen .map-tools{width:34px}.screen .spell-input{font-size:18px}.screen .scene-background-image{width:100%;height:100%;object-fit:cover}#toast{bottom:82px}button:focus-visible{outline:2px solid #638866;outline-offset:2px}button,input{-webkit-tap-highlight-color:transparent}@media(min-width:700px){.shell{max-width:440px}.nav{height:56px}}
+</style>
+<div class="shell"><main class="phone"><header class="nav"><button id="back">‹ 地图</button><strong id="title">Mimo在巴黎散步的天</strong><button id="share">↗ 分享</button></header><div class="screen" id="screen"></div><footer class="tabs"><button data-page="home">巴黎地图</button><button data-page="saved">我的手记</button><button data-page="review">拼写练习</button></footer></main></div><div id="toast" role="status"></div>
+<script>
+const modules = {"utils/content.js": function(require,module,exports){
+// 对话顺序：对方的法语、中文；Mimo 的法语、中文；拼写词、词义。
+const definitions = [
+['cafe','左岸咖啡馆','☕','Saint-Germain-des-Prés','店员','cafe','Mimo 想在窗边喝一杯咖啡。','Je voudrais… 是礼貌表达愿望的常用句式。',[
+['Bonjour, bienvenue !','你好，欢迎！','Bonjour !','你好！','bonjour','你好'],
+['Vous voulez voir la carte ?','想看看菜单吗？','La carte, s’il vous plaît.','请给我菜单。','carte','菜单'],
+['Qu’est-ce que vous prenez ?','您要点什么？','Je voudrais un café, s’il vous plaît.','我想要一杯咖啡，谢谢。','café','咖啡'],
+['Et avec ça ?','还要别的吗？','Et un croissant, s’il vous plaît.','还要一个可颂，谢谢。','croissant','可颂'],
+['Vous avez terminé ?','您用完了吗？','L’addition, s’il vous plaît.','请给我账单。','addition','账单'],
+['Merci, à bientôt !','谢谢，下次见！','Merci, au revoir !','谢谢，再见！','revoir','再见表达中的词']]],
+['bakery','面包店','🥐','Boulangerie','店员','cafe','Mimo 推开面包店的门，闻到了香味。','Une baguette 是法式长棍面包。',[
+['Bonjour, qu’est-ce qu’il vous faut ?','您好，需要什么？','Une baguette, s’il vous plaît.','请给我一根长棍面包。','baguette','长棍面包'],
+['Et autre chose ?','还要什么？','Deux croissants, s’il vous plaît.','请给我两个可颂。','deux','二'],
+['Vous voulez le pain tranché ?','需要切片吗？','Oui, tranché, s’il vous plaît.','是的，请切片。','tranché','切片的'],
+['C’est pour emporter ?','是带走吗？','Oui, à emporter.','是的，带走。','emporter','带走'],
+['Vous voulez un sac ?','需要袋子吗？','Un sac, s’il vous plaît.','请给我一个袋子。','sac','袋子'],
+['Vous payez comment ?','怎么付款？','Par carte, s’il vous plaît.','刷卡，谢谢。','carte','卡']]],
+['restaurant','小餐馆','🍽','Restaurant','服务员','cafe','散步有点饿了，Mimo 想吃晚饭。','Sur place 表示在店内，à emporter 表示带走。',[
+['Bonjour, vous êtes combien ?','您好，有几位？','Une table pour deux, s’il vous plaît.','请安排一张两人桌。','table','桌子'],
+['Vous avez une réservation ?','有预订吗？','Non, sans réservation.','没有，没有预订。','réservation','预订'],
+['Vous avez choisi ?','选好了吗？','Je voudrais une soupe.','我想要一份汤。','soupe','汤'],
+['Et comme boisson ?','喝点什么？','De l’eau, s’il vous plaît.','请给我一些水。','eau','水'],
+['Vous voulez un dessert ?','想要甜点吗？','Un dessert, s’il vous plaît.','请给我一份甜点。','dessert','甜点'],
+['Vous souhaitez régler ?','想结账吗？','L’addition, s’il vous plaît.','请给我账单。','addition','账单']]],
+['market','巴士底市集','🍎','Marché Bastille','摊主','market','Mimo 的篮子还是空的，一起挑些水果。','Marché 是市集，巴黎既有露天市集，也有室内市集。',[
+['Bonjour !','您好！','Bonjour, madame !','您好，女士！','madame','女士'],
+['Ces pommes vous intéressent ?','想看看这些苹果吗？','Ça coûte combien ?','这个多少钱？','combien','多少'],
+['Quelle quantité voulez-vous ?','您想要多少？','Un kilo de pommes, s’il vous plaît.','请给我一公斤苹果。','pommes','苹果（复数）'],
+['Autre chose ?','还要别的吗？','C’est tout, merci.','就这些，谢谢。','tout','全部'],
+['Vous voulez un sac ?','想要袋子吗？','Un sac, s’il vous plaît.','请给我一个袋子。','sac','袋子'],
+['Bonne journée !','祝您一天愉快！','Merci, bonne journée !','谢谢，祝您一天愉快！','journée','一天']]],
+['metro','地铁问路','Ⓜ','Métro · Paris','路人','metro','Mimo 有点迷路了，想找到地铁入口。','向陌生人问路时，可以先用 Excusez-moi 礼貌开口。',[
+['Bonjour !','你好！','Excusez-moi.','不好意思。','Excusez','请原谅（礼貌形式）'],
+['Je peux vous aider ?','我能帮您吗？','Où est le métro ?','地铁在哪里？','métro','地铁'],
+['Continuez dans cette rue.','沿这条街继续走。','C’est tout droit ?','是一直往前走吗？','droit','直'],
+['La station est au bout de la rue.','车站在街道尽头。','C’est loin ?','远吗？','loin','远'],
+['La station est là.','车站在那里。','L’entrée est ici ?','入口在这里吗？','entrée','入口'],
+['Oui, c’est ici !','是的，就在这里！','Merci beaucoup !','非常感谢！','beaucoup','很多']]],
+['park','公园拍照','🌳','Jardin du Luxembourg','游客','market','Mimo 想把公园里的好天气留在照片中。','Pouvez-vous… ? 可以用来礼貌请求别人帮忙。',[
+['Bonjour !','你好！','Excusez-moi, s’il vous plaît.','不好意思，打扰一下。','plaît','礼貌表达中的词'],
+['Oui ?','怎么了？','Pouvez-vous prendre une photo ?','您能帮忙拍张照片吗？','photo','照片'],
+['Avec votre téléphone ?','用您的手机吗？','Oui, voici mon téléphone.','是的，这是我的手机。','téléphone','手机'],
+['Vous voulez vous mettre ici ?','想站在这里吗？','Oui, ici, merci.','是的，在这里，谢谢。','ici','这里'],
+['Une autre photo ?','再拍一张吗？','Encore une, s’il vous plaît.','请再拍一张。','encore','再'],
+['Voilà, c’est fait !','好了，拍好了！','Merci, c’est parfait !','谢谢，太好了！','parfait','完美的']]],
+['museum','博物馆','🏛','Musée','工作人员','metro','Mimo 想看看博物馆里有什么。','Musée 是博物馆，billet 是门票。',[
+['Bonjour, combien de billets ?','您好，要几张票？','Un billet, s’il vous plaît.','请给我一张票。','billet','票'],
+['Vous voulez visiter l’exposition ?','想看展览吗？','Oui, l’exposition, s’il vous plaît.','是的，我想看展览。','exposition','展览'],
+['Vous cherchez quelque chose ?','您在找什么吗？','Où est l’entrée ?','入口在哪里？','entrée','入口'],
+['Vous voulez un plan ?','想要平面图吗？','Un plan, s’il vous plaît.','请给我一张平面图。','plan','平面图'],
+['Vous avez une question ?','有什么问题吗？','Les photos sont autorisées ?','可以拍照吗？','photos','照片（复数）'],
+['Autre chose ?','还有其他问题吗？','À quelle heure fermez-vous ?','你们几点关门？','heure','小时；时间']]],
+['zoo','动物园','🦒','Parc zoologique','工作人员','market','Mimo 带着好奇心来到动物园。','Animaux 是 animal（动物）的复数形式。',[
+['Bonjour, vous voulez des billets ?','您好，想买票吗？','Deux billets, s’il vous plaît.','请给我两张票。','billets','票（复数）'],
+['Vous voulez un plan ?','想要园区地图吗？','Oui, un plan, merci.','是的，请给我地图，谢谢。','plan','地图'],
+['Quels animaux cherchez-vous ?','想找什么动物？','Où sont les girafes ?','长颈鹿在哪里？','girafes','长颈鹿（复数）'],
+['Vous cherchez les toilettes ?','在找洗手间吗？','Oui, où sont les toilettes ?','是的，洗手间在哪里？','toilettes','洗手间'],
+['Vous avez une question ?','您有什么问题吗？','On peut prendre des photos ?','可以拍照吗？','photos','照片（复数）'],
+['Bonne visite !','祝您参观愉快！','Merci, j’aime les animaux !','谢谢，我喜欢动物！','animaux','动物（复数）']]],
+['hotel','酒店入住','🛎','Hôtel','前台','cafe','走了一天，Mimo 想放好行李休息。','服务场景中，Bonjour 和 s’il vous plaît 很常用。',[
+['Bonjour, vous avez réservé ?','您好，预订了吗？','J’ai une réservation.','我有预订。','réservation','预订'],
+['À quel nom ?','以什么名字预订？','Au nom de Mimo.','以 Mimo 的名字。','nom','名字'],
+['Une pièce d’identité, s’il vous plaît.','请出示身份证件。','Voici mon passeport.','这是我的护照。','passeport','护照'],
+['Vous avez une question ?','有什么问题吗？','Où est ma chambre ?','我的房间在哪里？','chambre','房间'],
+['Autre chose ?','还有其他问题吗？','Quel est le mot de passe du wifi ?','无线网络密码是什么？','passe','密码表达中的词'],
+['Pour demain matin ?','关于明天早上？','À quelle heure est le petit-déjeuner ?','早餐是几点？','petit-déjeuner','早餐']]],
+['supermarket','超市购物','🛒','Supermarché','店员','market','Mimo 要买一点牛奶和水。','Par carte 表示刷卡，en espèces 表示付现金。',[
+['Bonjour, je peux vous aider ?','您好，我能帮您吗？','Je cherche du lait.','我在找牛奶。','lait','牛奶'],
+['Vous cherchez aussi de l’eau ?','您也在找水吗？','Oui, de l’eau, s’il vous plaît.','是的，请给我水。','eau','水'],
+['Vous avez une question ?','有什么问题吗？','Quel est le prix ?','价格是多少？','prix','价格'],
+['Vous voulez un sac ?','想要袋子吗？','Oui, un sac, merci.','是的，要一个袋子，谢谢。','sac','袋子'],
+['Vous payez comment ?','怎么付款？','Je paie par carte.','我刷卡付款。','carte','卡'],
+['Le ticket ?','要收据吗？','Le ticket, s’il vous plaît.','请给我收据。','ticket','收据']]],
+['station','火车出行','🚆','Gare','工作人员','metro','Mimo 准备坐火车去下一座城市。','Gare 指火车站，quai 指站台。',[
+['Bonjour, quelle destination ?','您好，去哪里？','Un billet pour Lyon, s’il vous plaît.','请给我一张去里昂的票。','billet','票'],
+['Aller simple ou aller-retour ?','单程还是往返？','Un aller simple, s’il vous plaît.','请给我单程票。','simple','单程表达中的词'],
+['Pour quel jour ?','哪一天？','Pour aujourd’hui.','今天。','aujourd’hui','今天'],
+['Vous avez une question ?','有什么问题吗？','À quelle heure part le train ?','火车几点出发？','train','火车'],
+['Vous cherchez votre quai ?','在找您的站台吗？','Oui, quel quai ?','是的，哪个站台？','quai','站台'],
+['Bon voyage !','旅途愉快！','Merci, au revoir !','谢谢，再见！','revoir','再见表达中的词']]],
+['pharmacy','药店买用品','✚','Pharmacie','药剂师','market','Mimo 来药店购买创可贴和防晒用品。','Pharmacie 是药店；对话练习只涉及购物表达。',[
+['Bonjour, que cherchez-vous ?','您好，在找什么？','Des pansements, s’il vous plaît.','请给我一些创可贴。','pansements','创可贴（复数）'],
+['Autre chose ?','还要别的吗？','Une crème solaire, s’il vous plaît.','请给我一份防晒霜。','solaire','防晒表达中的词'],
+['Ce produit vous convient ?','这个商品合适吗？','Combien ça coûte ?','这个多少钱？','combien','多少'],
+['Vous avez une question ?','有什么问题吗？','Pouvez-vous répéter ?','您能再说一遍吗？','répéter','重复'],
+['Vous payez comment ?','怎么付款？','Par carte, s’il vous plaît.','刷卡，谢谢。','carte','卡'],
+['Voilà, bonne journée !','好了，祝您一天愉快！','Merci pour votre aide !','谢谢您的帮助！','aide','帮助']]]
+];
+const fixedVocabulary={revoir:['au revoir','再见'],plaît:['s’il vous plaît','请／劳驾'],passe:['mot de passe','密码'],Excusez:['Excusez-moi','不好意思／打扰一下']};
+const scenes = definitions.map((row, index) => {
+  const [id,title,icon,place,speaker,color,description,culture,rounds] = row;
+  return {id,title,icon,place,speaker,color,description,culture,goal:'6 轮对话 · 6 个关键词',x:22+(index%3)*220,y:100+Math.floor(index/3)*124,
+    steps:[0,1,2].map(step=>({title:['初次开口','继续交流','完成对话'][step],story:description,
+      phrases:rounds.slice(step*2,step*2+2).map((line,p)=>({id:`${id}-${step}-phrases-${p}`,fr:line[2],zh:line[3],target:line[4],targetZh:line[5],prompt:line[0],promptZh:line[1],speaker,hint:`关键词：${line[5]}`,audio:`/voices/${id}/${id}-${step}-phrases-${p}.mp3`,promptAudio:`/voices/${id}/${id}-${step}-phrases-${p}-prompt.mp3`})),
+      words:rounds.slice(step*2,step*2+2).map((line,p)=>{const fixed=fixedVocabulary[line[4]];return {id:`${id}-${step}-words-${p}`,fr:fixed?fixed[0]:line[4],zh:fixed?fixed[1]:line[5],target:fixed?fixed[0]:line[4],targetZh:fixed?fixed[1]:line[5],wordUnitReplaced:!!fixed,note:'场景词句'};})
+    }))};
+});
+const studyNotes=require('./study-notes');
+const phraseTargets=require('./phrase-targets');
+const items=[];
+scenes.forEach(scene=>scene.steps.forEach((step,index)=>['phrases','words'].forEach(type=>{
+  step[type]=step[type].map(item=>{
+    const phrase=type==='phrases'&&phraseTargets[item.id];
+    const target=phrase?phrase[0]:item.target;
+    const record=Object.assign({},item,{target,targetZh:phrase?phrase[1]:item.targetZh,practiceKind:phrase||item.wordUnitReplaced?'phrase':'word',practiceAudio:phrase?item.audio.replace('.mp3','-chunk.mp3'):type==='phrases'?item.audio.replace('.mp3','-word.mp3'):'',type,sceneId:scene.id,sceneTitle:scene.title,icon:scene.icon,context:step.story,step:index,study:studyNotes.get(target)});
+    if(type==='words')record.note=record.study.label;
+    if(type==='phrases'){const start=item.fr.toLowerCase().indexOf(target.toLowerCase());if(start<0)throw Error(`Missing spelling target: ${item.id}`);record.before=item.fr.slice(0,start);record.after=item.fr.slice(start+target.length);}
+    items.push(record);return record;
+  });
+})));
+scenes.forEach(scene=>{scene.background=`/assets/backgrounds/${scene.id}.jpg`;scene.goal='6 轮对话 · 单词与短语';});
+module.exports={scenes,items};
+
+},
+"utils/phrase-targets.js": function(require,module,exports){
+// 只扩展对话中的拼写目标；单词卡仍保留对应词汇，复习中单词与短语都会练。
+module.exports={
+ 'cafe-0-phrases-1':['s’il vous plaît','请／劳驾'],
+ 'cafe-2-phrases-1':['au revoir','再见'],
+ 'bakery-0-phrases-1':['Deux croissants','两个可颂'],
+ 'bakery-1-phrases-1':['à emporter','带走'],
+ 'bakery-2-phrases-1':['Par carte','刷卡'],
+ 'restaurant-0-phrases-0':['Une table pour deux','一张两人桌'],
+ 'restaurant-0-phrases-1':['sans réservation','没有预订'],
+ 'restaurant-1-phrases-1':['De l’eau','一些水'],
+ 'market-1-phrases-1':['C’est tout','就这些'],
+ 'market-2-phrases-1':['bonne journée','祝您一天愉快'],
+ 'metro-0-phrases-0':['Excusez-moi','不好意思／打扰一下'],
+ 'metro-1-phrases-0':['tout droit','一直往前'],
+ 'metro-2-phrases-1':['Merci beaucoup','非常感谢'],
+ 'park-0-phrases-0':['s’il vous plaît','请／劳驾'],
+ 'park-0-phrases-1':['Pouvez-vous prendre une photo','您能帮忙拍张照片吗'],
+ 'park-2-phrases-0':['Encore une','再来一张'],
+ 'park-2-phrases-1':['c’est parfait','太好了'],
+ 'museum-2-phrases-0':['Les photos sont autorisées','可以拍照吗'],
+ 'museum-2-phrases-1':['À quelle heure fermez-vous','你们几点关门'],
+ 'zoo-2-phrases-1':['j’aime les animaux','我喜欢动物'],
+ 'hotel-0-phrases-1':['Au nom de Mimo','以 Mimo 的名字'],
+ 'hotel-2-phrases-0':['le mot de passe du wifi','无线网络密码'],
+ 'hotel-2-phrases-1':['À quelle heure est le petit-déjeuner','早餐是几点'],
+ 'supermarket-2-phrases-0':['Je paie par carte','我刷卡付款'],
+ 'station-0-phrases-1':['Un aller simple','一张单程票'],
+ 'station-1-phrases-0':['Pour aujourd’hui','今天的'],
+ 'station-2-phrases-1':['au revoir','再见'],
+ 'pharmacy-0-phrases-1':['Une crème solaire','一份防晒霜'],
+ 'pharmacy-1-phrases-1':['Pouvez-vous répéter','您能再说一遍吗'],
+ 'pharmacy-2-phrases-1':['Merci pour votre aide','谢谢您的帮助']
+};
+
+},
+"utils/study-notes.js": function(require,module,exports){
+// 从用户词汇资料筛选词条，再按现有对话编写词卡；分组是视觉记忆提示，不是音节标注。
+const vocab='大学法语四级最全词汇表.pdf';
+const rows=[
+ ['bonjour','bonjour · 问候语','bon|jour','把 bon 和 jour 连在一起，结尾是 jour。',20],
+ ['addition','une addition · 阴性','ad|di|tion','中间有两个 d；餐馆里 l’addition 表示账单。',4],
+ ['baguette','une baguette · 阴性','ba|guette','保留 gu，结尾是 ette，不要漏掉双 t。',16],
+ ['billet','un billet · 阳性','bi|llet','中间是双 l，结尾保留 t。',19],
+ ['café','un café · 阳性','ca|fé','末尾用带尖音符的 é；cafe 少了重音。',23],
+ ['carte','une carte · 阴性','car|te','carte 在点单时是菜单，在付款时是银行卡。',25],
+ ['croissant','un croissant · 阳性','croi|ss|ant','中间有两个 s；末尾是 ant。',40],
+ ['deux','deux · 数词','deu|x','表示二，结尾是 x。',48],
+ ['entrée','une entrée · 阴性','en|trée','这里是入口；末尾是 ée，重音后还要一个 e。',60],
+ ['journée','une journée · 阴性','jour|née','先记 jour，再记 née，末尾是 ée。',89],
+ ['musée','un musée · 阳性','mu|sée','虽然末尾是 ée，musée 仍是阳性名词。',103],
+ ['passeport','un passeport · 阳性','passe|port','中间保留双 s，末尾是 port。',112],
+ ['quai','un quai · 阳性','qu|ai','四个字母：q-u-a-i，表示站台。',125],
+ ['restaurant','un restaurant · 阳性','res|tau|rant','中间是 tau，结尾 rant。',134],
+ ['solaire','solaire · 形容词','so|laire','防晒霜说 crème solaire；本题只填 solaire。',143],
+ ['téléphone','un téléphone · 阳性','té|lé|phone','前两个 e 都带尖音符：té-lé。',150],
+ ['ticket','un ticket · 阳性','ti|cket','保留 ck；超市里 ticket 可指购物小票。',151],
+ ['pomme','une pomme · 阴性','po|mme','中间是双 m；复数 pommes 还要加 s。',118],
+ ['photo','une photo · 阴性','pho|to','开头保留 ph；复数 photos 加 s。',115],
+ ['lait','du lait · 阳性','lai|t','结尾的 t 虽常不读，拼写仍要保留。',90],
+ ['eau','de l’eau · 阴性','eau','三个字母 e-a-u；本题不用加 l’ 或 de l’。',53],
+ ['train','un train · 阳性','tr|ain','末尾是 ain，不是 an。',154],
+ ['chambre','une chambre · 阴性','cham|bre','ch 开头，中间保留 m。',27],
+ ['combien','combien · 疑问词','com|bien','询问多少；中间是 m，后半段是 bien。',32],
+ ['beaucoup','beaucoup · 副词','beau|coup','把 beau 和 coup 连起来；末尾保留 p。',17],
+ ['heure','une heure · 阴性','heu|re','开头保留 h，表示小时或时间。',80],
+ ['nom','un nom · 阳性','no|m','表示名字；末尾是 m。',105],
+ ['sac','un sac · 阳性','sa|c','三个字母 s-a-c，表示袋子。',137],
+ ['plan','un plan · 阳性','pl|an','可指地图或平面图，注意和 pain（面包）区分。',117],
+ ['prix','un prix · 阳性','pri|x','询价时用 prix；结尾是 x，不是 s。',122],
+ ['aide','une aide · 阴性','ai|de','Merci pour votre aide 表示谢谢您的帮助。',6],
+ ['parfait','parfait · 形容词','par|fait','后半段是 fait，末尾保留 t。',111],
+ ['encore','encore · 副词','en|core','Encore une 表示再来一个或再来一次。',58],
+ ['ici','ici · 副词','i|ci','三个字母 i-c-i，表示这里。',81],
+ ['exposition','une exposition · 阴性','ex|po|si|tion','展览：开头 ex，结尾 tion。',66],
+ ['dessert','un dessert · 阳性','de|ss|ert','双 s；注意不要和 désert（沙漠）混淆。',47],
+ ['soupe','une soupe · 阴性','sou|pe','汤：ou 连在一起，末尾保留 e。',144],
+ ['aujourd’hui','aujourd’hui · 副词','au|jourd|’|hui','保留 d 后的撇号；直引号和弯引号都可。',13]
+];
+const aliases={billets:'billet',pommes:'pomme',photos:'photo'};
+const notes={};
+rows.forEach(([word,label,parts,tip,page])=>{notes[word]={label,parts:parts.split('|'),tip,source:{file:vocab,page},sourceLabel:`词汇表 · 第 ${page} 页`};});
+notes['réservation']={label:'une réservation · 阴性',parts:['ré','ser','va','tion'],tip:'预订：开头是 ré，结尾是 tion；与 réserver 一起记。',source:{file:'全国大学法语四级考试大纲-2023.pdf',page:12},sourceLabel:'2023 大纲 · 第 12 页'};
+const extra={
+ 'emporter':['em','por','ter'],'tranché':['tran','ché'],'revoir':['re','voir'],'madame':['ma','dame'],'tout':['tout'],'Excusez':['Ex','cu','sez'],'métro':['mé','tro'],'droit':['dr','oit'],'loin':['loin'],'plaît':['plaît'],'girafes':['gi','ra','fes'],'toilettes':['toi','le','ttes'],'animaux':['ani','maux'],'passe':['pa','sse'],'petit-déjeuner':['petit','-','dé','jeu','ner'],'simple':['sim','ple'],'pansements':['pan','se','ments'],'répéter':['ré','pé','ter']
+};
+function get(target){
+ const key=String(target).normalize('NFC').toLowerCase().replace(/[‘’]/g,"'");
+ const alias=aliases[key];const note=notes[alias||target]||notes[key]||notes[key.replace(/'/g,'’')];
+ if(target.includes(' ')||target==='Excusez-moi'){
+   const tips={"s'il vous plaît":'作为完整礼貌短语记忆：s’il 有撇号，plaît 的 î 有长音符。',"au revoir":'au 和 revoir 一起记，词间保留一个空格。','à emporter':'à 带重音，和 emporter 一起表示带走。','tout droit':'两个词一起表示一直往前，别只写 droit。',"c'est tout":'三个词一起表示就这些；c’est 保留撇号。','par carte':'付款搭配 par carte，别只写 carte。'};
+   return {label:target+' · 固定表达',parts:target.match(/\S+\s*/g)||[target],tip:tips[key]||'完整拼出这段表达，保留词间空格、撇号、连字符和重音。',sourceLabel:'日常表达整理'};
+ }
+ if(note){const value=Object.assign({},note);if(alias){value.label=target+' · 复数';value.parts=note.parts.slice();value.parts[value.parts.length-1]+='s';value.tip='这里使用复数，末尾保留 s。'+note.tip;}return value;}
+ return {label:target,parts:extra[target]||extra[key]||[target],tip:'先观察字母和重音，再遮住单词重新拼写。',sourceLabel:''};
+}
+module.exports={get};
+
+},
+"utils/store.js": function(require,module,exports){
+const { scenes, items } = require('./content');
+const spelling = require('./spelling');
+const config = require('./config');
+const KEY = 'mimo-paris-v1';
+const DAY = 24 * 60 * 60 * 1000;
+function read() {
+  try {
+    const value = wx.getStorageSync(KEY);
+    const state={
+      saved: Array.isArray(value && value.saved) ? value.saved : [],
+      completed: Array.isArray(value && value.completed) ? value.completed : [],
+      spelled: Array.isArray(value && value.spelled) ? value.spelled : [],
+      spellingTargets: value && value.spellingTargets && typeof value.spellingTargets==='object' ? value.spellingTargets : {},
+      mistakes: value && value.mistakes && typeof value.mistakes === 'object' && !Array.isArray(value.mistakes) ? value.mistakes : {},
+      review: value && value.review && typeof value.review === 'object' && !Array.isArray(value.review) ? value.review : {}
+    };
+    state.spelled=state.spelled.filter(id=>{const item=items.find(record=>record.id===id);return item&&(item.practiceKind!=='phrase'||state.spellingTargets[id]===spelling.normalize(item.target));});
+    state.mistakes=Object.fromEntries(Object.entries(state.mistakes).filter(([key,record])=>record&&items.some(item=>spelling.normalize(item.target)===key)));
+    items.filter(item=>item.wordUnitReplaced&&state.review[item.id]&&state.review[item.id].target!==spelling.normalize(item.target)).forEach(item=>{state.review[item.id]={level:0,due:Date.now(),target:spelling.normalize(item.target)};});
+    return state;
+  } catch (error) {
+    wx.showToast({title: '无法读取学习记录，请稍后重试', icon: 'none'});
+    return null;
+  }
+}
+function update(change) {
+  const state = read();
+  if (!state) return false;
+  change(state);
+  try { wx.setStorageSync(KEY, state); return true; }
+  catch (error) { wx.showToast({title: '记录未保存，请重试', icon: 'none'}); return false; }
+}
+function unlocked(id) {return scenes.some(scene => scene.id === id);}
+function resolveMistake(state,item,helped){
+  const key=spelling.normalize(item.target);const record=state.mistakes[key];if(!record)return;
+  const streak=helped?0:(record.streak||0)+1;
+  state.mistakes[key]=Object.assign({},record,{streak,needsPractice:streak<2,lastSeen:Date.now()});
+}
+function recordMistake(id,answer,helpOnly=false){
+  const item=items.find(value=>value.id===id);if(!item)return false;
+  return update(state=>{
+    const key=spelling.normalize(item.target);const previous=state.mistakes[key]||{};
+    state.mistakes[key]={target:item.target,zh:item.targetZh,itemId:id,wrongCount:(previous.wrongCount||0)+(helpOnly?0:1),lastAnswer:answer,streak:0,needsPractice:true,lastSeen:Date.now()};
+    const related=items.filter(value=>value.sceneId===item.sceneId&&spelling.normalize(value.target)===key);
+    related.forEach(value=>{state.review[value.id]={level:0,due:Date.now(),target:spelling.normalize(value.target)};});
+  });
+}
+function succeed(id,helped=false){const item=items.find(value=>value.id===id);if(!item)return false;return update(state=>resolveMistake(state,item,helped));}
+function difficult(state){
+  if(!state)return [];
+  return Object.keys(state.mistakes).filter(key=>state.mistakes[key].needsPractice).sort((a,b)=>(state.mistakes[b].wrongCount||0)-(state.mistakes[a].wrongCount||0)).map(key=>{
+    const record=state.mistakes[key];const source=items.find(value=>value.id===record.itemId);
+    const item=items.find(value=>value.type==='words'&&spelling.normalize(value.target)===key&&(!source||value.sceneId===source.sceneId))||source;
+    return item?Object.assign({},item,{wrongCount:record.wrongCount,streak:record.streak}):null;
+  }).filter(Boolean);
+}
+function markSpelled(id, answer, helped=false) {
+  const item = items.find(value => value.id === id && value.type === 'phrases');
+  if (!item || !spelling.correct(answer, item.target)) return false;
+  return update(state => {if (!state.spelled.includes(id)) state.spelled.push(id);state.spellingTargets[id]=spelling.normalize(item.target);resolveMistake(state,item,helped);});
+}
+function toggleSaved(id) {
+  if (!items.some(item => item.id === id)) return false;
+  return update(state => {
+    state.saved = state.saved.includes(id) ? state.saved.filter(value => value !== id) : state.saved.concat(id);
+  });
+}
+function learnStep(sceneId, step) {
+  if (!scenes.some(scene => scene.id === sceneId && scene.steps[step])) return false;
+  return update(state => {
+    if (!unlocked(sceneId, state)) return;
+    items.filter(item => item.sceneId === sceneId && item.step === step).forEach(item => {
+      if (!state.review[item.id]) state.review[item.id] = {level: 0, due: Date.now(),target:spelling.normalize(item.target)};
+    });
+  });
+}
+function complete(id) {
+  const state = read();
+  if (!state || !unlocked(id, state)) return false;
+  const records = items.filter(item => item.sceneId === id);
+  if (!records.length || !records.every(item => state.review[item.id])) return false;
+  if (!records.filter(item => item.type === 'phrases').every(item => state.spelled.includes(item.id))) return false;
+  return update(value => { if (!value.completed.includes(id)) value.completed.push(id); });
+}
+function due(state, now = Date.now()) {
+  return state ? items.filter(item => state.review[item.id] && state.review[item.id].due <= now).sort((a,b)=>Number(!!(state.mistakes[spelling.normalize(b.target)]||{}).needsPractice)-Number(!!(state.mistakes[spelling.normalize(a.target)]||{}).needsPractice)) : [];
+}
+function rate(id, remembered, now = Date.now()) {
+  return update(state => {
+    const record = state.review[id];
+    if (!record) return;
+    const level = remembered ? Math.min((record.level || 0) + 1, 3) : 0;
+    const item=items.find(value=>value.id===id);
+    state.review[id] = {level, due: now + (remembered ? [0, 1, 3, 7][level] * DAY : 10 * 60 * 1000),target:spelling.normalize(item.target)};
+  });
+}
+function shareScene(id) {
+  const scene = scenes.find(value => value.id === id) || scenes[0];
+  return {title: `${config.name} · ${scene.title}`, path: `/pages/scene/scene?id=${encodeURIComponent(scene.id)}`};
+}
+function shareHome() {
+  return {title: `${config.name} · 一起学日常法语`, path: '/pages/home/home'};
+}
+module.exports = {read, unlocked, markSpelled, recordMistake, succeed, difficult, toggleSaved, learnStep, complete, due, rate, shareScene, shareHome};
+
+},
+"utils/spelling.js": function(require,module,exports){
+function normalize(value) {return String(value || '').normalize('NFC').trim().toLocaleLowerCase('fr-FR').replace(/[’‘]/g, "'").replace(/\s+/g,' ').replace(/[.!?…]+$/u,'').trim();}
+function correct(answer, target) {return normalize(answer) === normalize(target);}
+function plain(value){return normalize(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function diagnose(answer,target){
+ const typed=normalize(answer),expected=normalize(target);
+ if(!typed)return '先输入单词，再检查拼写。';
+ if(correct(answer,target))return '拼写正确 ✓';
+ if(expected.includes(' ')&&typed.split(' ').length<expected.split(' ').length)return `这里要写完整表达，共 ${expected.split(' ').length} 个词，不能只填一个词。`;
+ if(plain(typed)===plain(expected)){
+  const names={'é':'é（尖音符）','è':'è（重音符）','ê':'ê（长音符）','à':'à（重音符）','ç':'ç（软音符）','ù':'ù（重音符）','î':'î（长音符）','ô':'ô（长音符）','ï':'ï（分音符）'};
+  const index=[...expected].findIndex((letter,i)=>letter!==[...typed][i]);
+  return `字母基本对了，第 ${index+1} 个位置应是 ${names[[...expected][index]]||[...expected][index]}。`;
+ }
+ const withoutArticle=typed.replace(/^(?:(?:une|un|les|le|la|des|du|de)\s+|l')/,'');
+ if(withoutArticle!==typed&&plain(withoutArticle)===plain(expected))return expected.includes(' ')?'前面多加了一次冠词，按题目填写完整表达。':'这里只填单词，不用加 un、une、le、la 等冠词。';
+ if(expected.endsWith('s')&&typed===expected.slice(0,-1))return '这里需要复数，词尾还少一个 s。';
+ if(expected.endsWith('x')&&typed===expected.slice(0,-1))return '词尾还少一个 x，注意这个复数或词尾形式。';
+ if(typed.replace(/[-' ]/g,'')===expected.replace(/[-' ]/g,''))return '注意连字符 - 和撇号 ’ 的位置，不要用空格代替。';
+ let index=0;while(index<typed.length&&index<expected.length&&typed[index]===expected[index])index++;
+ if(typed.length===expected.length&&typed[index]===expected[index+1]&&typed[index+1]===expected[index])return `第 ${index+1}、${index+2} 个字母的顺序反了。`;
+ if(typed.length<expected.length)return `少了 ${expected.length-typed.length} 个字符，从第 ${index+1} 个位置检查。`;
+ if(typed.length>expected.length)return `多了 ${typed.length-expected.length} 个字符，从第 ${index+1} 个位置检查。`;
+ return `第 ${index+1} 个字母还不对，试着分组记忆后再拼。`;
+}
+function compare(answer,target){const typed=[...normalize(answer)],expected=[...normalize(target)];return expected.map((letter,index)=>({letter,typed:typed[index]||'缺',wrong:typed[index]!==letter}));}
+module.exports = {normalize, correct, diagnose, compare};
+
+},
+"utils/spelling-practice.js": function(require,module,exports){
+const spelling=require('./spelling');
+const store=require('./store');
+const sounds=require('./feedback');
+function state(){return {answer:'',feedback:'',attempts:0,rescue:'',usedHelp:false,comparison:[],previousAnswer:'',studyOpen:false};}
+const methods={
+ input(event){this.cursor=event.detail.cursor;this.setData({answer:event.detail.value,feedback:''});},
+ rememberCursor(event){if(Number.isInteger(event.detail.cursor))this.cursor=event.detail.cursor;},
+ accent(event){const char=event.currentTarget.dataset.char;const value=this.data.answer;const position=Number.isInteger(this.cursor)?this.cursor:value.length;const previous=value[position-1];const base=letter=>String(letter||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const replace=/[éèêàçùôîï]/.test(char)&&previous!==char&&base(previous)===base(char);const start=replace?position-1:position;this.cursor=start+char.length;this.setData({answer:value.slice(0,start)+char+value.slice(position),feedback:''});},
+ check(){
+  const item=this.currentSpellingItem();if(!item||this.data.passed||this.data.checked||this.data.rescue==='observe')return;
+  if(!spelling.normalize(this.data.answer)){this.setData({feedback:item.practiceKind==='phrase'?'先输入完整表达，再检查拼写。':'先输入单词，再检查拼写。'});return;}
+  if(spelling.correct(this.data.answer,item.target)){
+    if(this.data.rescue==='copy'){sounds.play();this.cursor=0;this.setData({rescue:'',answer:'',attempts:0,comparison:[],previousAnswer:'',studyOpen:false,feedback:'现在遮住答案，独立拼一次。'});return;}
+    this.spellingPassed(this.data.usedHelp);if(this.data.passed||this.data.checked){if(wx.hideToast)wx.hideToast();sounds.play('correct');}return;
+  }
+  if(!store.recordMistake(item.id,this.data.answer))return;
+  sounds.play('error');
+  const attempts=this.data.attempts+1;
+  let feedback=spelling.diagnose(this.data.answer,item.target);
+  if(attempts===2)feedback+=` 提示：${item.target[0]}…，共 ${[...item.target].length} 个字符。`;
+  this.setData({attempts,usedHelp:true,feedback,rescue:attempts>=3?'observe':this.data.rescue,comparison:spelling.compare(this.data.answer,item.target),previousAnswer:this.data.answer});
+ },
+ seeWord(){const item=this.currentSpellingItem();if(!item)return;if(!store.recordMistake(item.id,this.data.answer,true))return;this.setData({rescue:'observe',usedHelp:true,comparison:spelling.compare(this.data.answer,item.target),previousAnswer:this.data.answer,feedback:'先观察正确写法，再跟写，最后遮住重拼。'});},
+ copyWord(){this.cursor=0;this.setData({rescue:'copy',usedHelp:true,answer:'',attempts:0,feedback:'看着上面的词，完整输入一遍。'});},
+ toggleStudy(){const opening=!this.data.studyOpen;if(opening&&!this.data.passed&&!this.data.checked&&(this.data.practice||this.data.item)){const item=this.currentSpellingItem();if(!store.recordMistake(item.id,this.data.answer,true))return;this.setData({usedHelp:true});}this.setData({studyOpen:opening});}
+};
+module.exports={state,methods};
+
+},
+"utils/feedback.js": function(require,module,exports){
+const KEY='mimo-click-sounds';
+const players={};
+function enabled(){try{return wx.getStorageSync(KEY)!==false;}catch(error){return true;}}
+function play(kind='tap'){
+ if(!enabled()||!wx.createInnerAudioContext)return;
+ if(!players[kind]){const audio=wx.createInnerAudioContext();audio.src=`/assets/sounds/${kind}.wav`;audio.volume=kind==='tap'?.18:.26;audio.obeyMuteSwitch=true;audio.onError(()=>{});players[kind]=audio;}
+ players[kind].stop();players[kind].play();
+}
+function stop(){Object.keys(players).forEach(key=>players[key].stop());}
+const taps=['start','practice','accent','save','saveWord','nextStep','previous','copyWord','seeWord','toggleStudy','reveal','hint','skip','next','restart','goMap','goReview','openScene','filter','remove','zoom','locateCat','togglePlaces','findScene','culture','savePoster','previewPoster','onShareAppMessage'];
+function withSounds(options){
+ const result=Object.assign({},options);
+ taps.forEach(name=>{const method=result[name];if(typeof method==='function')result[name]=function(...args){play();return method.apply(this,args);};});
+ const tab=result.onTabItemTap;result.onTabItemTap=function(...args){play();if(tab)return tab.apply(this,args);};
+ result.toggleSound=function(){const next=!enabled();try{wx.setStorageSync(KEY,next);}catch(error){wx.showToast({title:'音效设置未保存，请重试',icon:'none'});return;}this.setData({soundEnabled:next});if(next)play();else stop();};
+ return result;
+}
+module.exports={enabled,play,stop,withSounds};
+
+},
+"utils/config.js": function(require,module,exports){
+module.exports = {
+  name: 'Mimo在巴黎散步的天',
+  // 场景 ID 对应真实小程序码的本地图片路径；不要放 AppSecret。
+  codes: {},
+  // 可选：部署 sceneCode 云函数后填写环境 ID。
+  cloudEnv: ''
+};
+
+},
+"utils/poster.js": function(require,module,exports){
+const config = require('./config');
+function round(ctx,x,y,w,h,r,color) {
+  ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();ctx.fill();
+}
+function circle(ctx,x,y,r,color){ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();}
+function words(ctx,text,x,y,size,color){ctx.fillStyle=color;ctx.font=`${size}px sans-serif`;ctx.fillText(text,x,y);}
+function draw(ctx,scene,code) {
+  ctx.clearRect(0,0,600,800);round(ctx,0,0,600,800,0,'#f7f3e8');
+  words(ctx,config.name,35,47,25,'#315e4b');words(ctx,'MIMO À PARIS · SCENE SELFIE',35,74,12,'#809076');
+  round(ctx,28,95,544,470,22,{cafe:'#ecd4b6',market:'#d5e3c4',metro:'#cddfe2'}[scene.color]);
+  circle(ctx,495,154,33,'#fff7da');
+  // 每张自拍使用对应地点的门头或标识，保留同一个原创小猫。
+  round(ctx,50,181,320,243,15,'#fff3dc');
+  words(ctx,scene.place,65,216,18,'#738364');
+  for(let x=65;x<354;x+=48)round(ctx,x,229,32,28,0,'#91a47e');
+  round(ctx,74,271,120,138,55,'#b7c7ae');round(ctx,218,271,120,138,55,'#b7c7ae');
+  // 为不同场景加入可识别的小道具。
+  if(scene.id==='cafe'){round(ctx,87,311,56,53,9,'#fff9ea');ctx.strokeStyle='#fff9ea';ctx.lineWidth=7;ctx.strokeRect(135,322,19,28);round(ctx,81,366,80,6,3,'#806c50');}
+  if(scene.id==='bakery'){round(ctx,83,314,96,30,15,'#dcb373');for(let x=100;x<161;x+=20){ctx.strokeStyle='#fff1cd';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(x,317);ctx.lineTo(x+12,334);ctx.stroke();}}
+  if(scene.id==='restaurant'){round(ctx,74,343,113,8,3,'#956e4c');round(ctx,88,351,8,53,0,'#956e4c');round(ctx,170,351,8,53,0,'#956e4c');circle(ctx,128,328,26,'#fff9ed');circle(ctx,128,328,15,'#d7a373');}
+  if(scene.id==='market'||scene.id==='supermarket'){round(ctx,70,350,135,54,4,'#b59c6d');for(let x=88;x<191;x+=26){circle(ctx,x,340,12,'#c97360');round(ctx,x,322,3,9,0,'#71935f');}}
+  if(scene.id==='park'){circle(ctx,129,296,59,'#789a63');circle(ctx,90,326,31,'#8daa73');round(ctx,124,329,10,79,0,'#9a7956');round(ctx,74,386,92,8,2,'#8f7559');}
+  if(scene.id==='museum'){ctx.fillStyle='#d0b98a';ctx.beginPath();ctx.moveTo(66,293);ctx.lineTo(129,250);ctx.lineTo(192,293);ctx.closePath();ctx.fill();for(let x=80;x<181;x+=30)round(ctx,x,302,15,80,0,'#f8e6be');round(ctx,68,388,125,10,0,'#cbb188');}
+  if(scene.id==='zoo'){round(ctx,117,290,22,105,10,'#d9b866');circle(ctx,140,280,23,'#d9b866');round(ctx,83,373,70,30,12,'#d9b866');for(let y=310;y<373;y+=25)circle(ctx,130,y,6,'#ad814d');circle(ctx,149,275,3,'#4c4835');}
+  if(scene.id==='metro'){circle(ctx,129,306,47,'#faf2d6');words(ctx,'M',105,324,50,'#638779');round(ctx,80,370,97,8,0,'#698375');round(ctx,93,388,72,8,0,'#698375');}
+  if(scene.id==='station'){round(ctx,77,281,105,97,20,'#729999');round(ctx,87,294,85,41,6,'#e6eee4');circle(ctx,95,382,11,'#587177');circle(ctx,165,382,11,'#587177');}
+  if(scene.id==='hotel'){words(ctx,'HÔTEL',79,328,27,'#6a7759');round(ctx,92,357,79,35,4,'#eddbb7');}
+  if(scene.id==='pharmacy'){round(ctx,113,289,30,91,3,'#638e6f');round(ctx,82,320,92,30,3,'#638e6f');}
+  words(ctx,scene.title,65,463,24,'#607653');
+  // 身体与抬起的爪子，让画面呈现自拍姿态。
+  round(ctx,239,439,241,122,68,'#dfb67e');
+  ctx.save();ctx.translate(401,381);ctx.rotate(-0.12);
+  ctx.fillStyle='#e9bf87';ctx.beginPath();ctx.moveTo(-105,-40);ctx.lineTo(-92,-144);ctx.lineTo(-25,-102);ctx.lineTo(45,-105);ctx.lineTo(106,-145);ctx.lineTo(118,-33);ctx.closePath();ctx.fill();
+  round(ctx,-121,-104,247,211,83,'#e9bf87');
+  circle(ctx,-52,-16,8,'#463c32');circle(ctx,50,-16,8,'#463c32');circle(ctx,-78,16,17,'#e8a78a');circle(ctx,78,16,17,'#e8a78a');
+  ctx.strokeStyle='#655040';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(-13,8);ctx.quadraticCurveTo(0,28,13,8);ctx.stroke();
+  round(ctx,-89,92,184,26,10,'#527e60');ctx.restore();
+  ctx.save();ctx.translate(529,491);ctx.rotate(-.35);round(ctx,-30,-89,60,162,28,'#e9bf87');round(ctx,-30,-108,58,89,12,'#456957');circle(ctx,0,-83,14,'#a7c6b5');ctx.restore();
+  words(ctx,'我和 Mimo，在这里学会了 6 轮表达。',35,600,22,'#315e4b');
+  words(ctx,scene.steps[1].phrases[0].target+' · '+scene.steps[1].phrases[0].targetZh,35,635,17,'#65785c');
+  const date=new Date();words(ctx,`${date.getFullYear()}.${date.getMonth()+1}.${date.getDate()} · ${scene.title}`,35,680,17,'#7d8475');
+  if(code) {round(ctx,435,589,135,135,10,'#fff');ctx.drawImage(code,443,597,119,119);words(ctx,'扫码，一起学法语',428,748,16,'#63785d');}
+  else {round(ctx,435,589,135,135,10,'#e7e9df');words(ctx,'分享链接',459,646,16,'#7a8473');words(ctx,'一起散步',469,671,16,'#7a8473');words(ctx,'分享链接，和朋友一起学',415,748,15,'#8e927f');}
+  words(ctx,'小猫场景自拍 · 日常法语手记',35,757,16,'#7d8475');
+}
+async function codePath(scene) {
+  return 'codes/'+scene.id+'.png';
+  if(!config.cloudEnv || !wx.cloud)return '';
+  const response=await wx.cloud.callFunction({name:'sceneCode',data:{id:scene.id}});
+  if(!response.result || !response.result.base64)throw Error('Missing mini program code');
+  const file=`${wx.env.USER_DATA_PATH}/mimo-code-${scene.id}.png`;
+  await new Promise((resolve,reject)=>wx.getFileSystemManager().writeFile({filePath:file,data:response.result.base64,encoding:'base64',success:resolve,fail:reject}));
+  return file;
+}
+async function generate(page,scene) {
+  const canvas=await new Promise((resolve,reject)=>wx.createSelectorQuery().in(page).select('#posterCanvas').fields({node:true,size:true}).exec(result=>result[0]&&result[0].node?resolve(result[0].node):reject(Error('Canvas unavailable'))));
+  canvas.width=600;canvas.height=800;let image=null;
+  try {const path=await codePath(scene);if(path)image=await new Promise((resolve,reject)=>{const img=canvas.createImage();img.onload=()=>resolve(img);img.onerror=reject;img.src=path;});}
+  catch(error){wx.showToast({title:'分享码暂未加载，自拍仍可保存',icon:'none'});}
+  draw(canvas.getContext('2d'),scene,image);
+  const result=await new Promise((resolve,reject)=>wx.canvasToTempFilePath({canvas,width:600,height:800,destWidth:600,destHeight:800,fileType:'png',success:resolve,fail:reject},page));
+  return {path:result.tempFilePath,hasCode:!!image};
+}
+module.exports={generate,draw};
+
+},
+"utils/map.js": function(require,module,exports){
+const width=1800,height=1500;
+const positions={cafe:[590,760],bakery:[330,590],restaurant:[910,820],market:[1170,620],metro:[820,1100],park:[460,1080],museum:[650,380],zoo:[1420,990],hotel:[910,510],supermarket:[190,820],station:[1180,220],pharmacy:[260,300]};
+function clamp(x,y,zoom,ratio){return {x:Math.min(0,Math.max(694*ratio-width*ratio*zoom,x)),y:Math.min(0,Math.max(650*ratio-height*ratio*zoom,y))};}
+function center(id,zoom,ratio){const point=positions[id]||positions.cafe;return clamp(347*ratio-(point[0]+83)*ratio*zoom,325*ratio-(point[1]+60)*ratio*zoom,zoom,ratio);}
+module.exports={width,height,positions,clamp,center};
+
+},
+"pages/home/home.js": function(require,module,exports){
+const feedback=require('../../utils/feedback');
+const {scenes}=require('../../utils/content');
+const store=require('../../utils/store');
+const map=require('../../utils/map');
+Page(feedback.withSounds({
+ data:{scenes:[],completed:0,due:0,mapX:0,mapY:0,zoom:1,placesOpen:false,catX:650,catY:889,catScene:'cafe',blocks:[{x:160,y:150},{x:510,y:190},{x:820,y:260},{x:1240,y:420},{x:1360,y:760},{x:240,y:1050},{x:710,y:1260},{x:1120,y:1210},{x:1030,y:80},{x:90,y:520},{x:390,y:810},{x:1530,y:1230}]},
+ onShow(){
+  if(!this.ratio){this.ratio=(wx.getWindowInfo?wx.getWindowInfo().windowWidth:375)/750;this.position=map.center('cafe',1,this.ratio);}
+  const state=store.read();
+  const list=scenes.map(scene=>Object.assign({},scene,{x:map.positions[scene.id][0],y:map.positions[scene.id][1],unlocked:true,done:!!state&&state.completed.includes(scene.id)&&scene.steps.every(step=>step.phrases.every(item=>state.spelled.includes(item.id)))}));
+  this.setData({scenes:list,completed:list.filter(scene=>scene.done).length,due:store.due(state).length,mapX:this.position.x,mapY:this.position.y,soundEnabled:require('../../utils/feedback').enabled()});
+ },
+ onMapChange(event){if(event.detail&&Number.isFinite(event.detail.x))this.position={x:event.detail.x,y:event.detail.y};},
+ touchStart(event){const touch=event.touches&&event.touches[0];this.touch=touch?{x:touch.clientX,y:touch.clientY}:null;this.dragging=false;},
+ touchMove(event){const touch=event.touches&&event.touches[0];if(touch&&this.touch&&Math.hypot(touch.clientX-this.touch.x,touch.clientY-this.touch.y)>7)this.dragging=true;},
+ openScene(event){if(this.dragging){this.dragging=false;return;}const id=event.currentTarget.dataset.id;const point=map.positions[id];if(!point)return;this.setData({catScene:id,catX:point[0]+50,catY:point[1]+122,placesOpen:false});wx.navigateTo({url:`/pages/scene/scene?id=${id}`});},
+ moveTo(id){const position=map.center(id,this.data.zoom,this.ratio);this.position=position;this.dragging=false;this.setData({mapX:position.x,mapY:position.y,placesOpen:false});},
+ locateCat(){this.moveTo(this.data.catScene);},
+ togglePlaces(){this.setData({placesOpen:!this.data.placesOpen});},
+ findScene(event){this.moveTo(event.currentTarget.dataset.id);},
+ zoom(event){const next=Math.round(Math.max(.7,Math.min(1.6,this.data.zoom+Number(event.currentTarget.dataset.delta)))*10)/10;const previous=this.data.zoom;const position=this.position||{x:this.data.mapX,y:this.data.mapY};const x=347*this.ratio-(347*this.ratio-position.x)*next/previous;const y=325*this.ratio-(325*this.ratio-position.y)*next/previous;this.position=map.clamp(x,y,next,this.ratio);this.setData({zoom:next,mapX:this.position.x,mapY:this.position.y});},
+ goReview(){wx.switchTab({url:'/pages/review/review'});},
+ onShareAppMessage(){return store.shareHome();}
+}));
+
+},
+"pages/scene/scene.js": function(require,module,exports){
+const feedback=require('../../utils/feedback');
+const {scenes}=require('../../utils/content');
+const store=require('../../utils/store');
+const poster=require('../../utils/poster');
+const practice=require('../../utils/spelling-practice');
+Page(feedback.withSounds(Object.assign({},practice.methods,{
+  data:Object.assign(practice.state(),{scene:null,step:null,line:null,index:0,phraseIndex:0,round:1,saved:{},started:false,revealed:false,practice:false,passed:false,cultureOpen:false,finished:false,posterPath:'',posterBusy:false,hasCode:false,accents:['é','è','ê','à','ç','ù','ô','î','ï','’']}),
+  onLoad(options){
+    this.roundPasses=new Set();
+    let id=options.id;
+    if(options.scene){const query=decodeURIComponent(options.scene);id=query.startsWith('id=')?query.slice(3):query;}
+    const scene=scenes.find(value=>value.id===id)||scenes[0];
+    this.setData({scene});wx.setNavigationBarTitle({title:scene.title});this.showRound(0,0);this.refresh();
+    this.audio=wx.createInnerAudioContext();this.audio.obeyMuteSwitch=false;
+    this.audio.onError(()=>wx.showToast({title:'发音播放失败，请重试',icon:'none'}));
+  },
+  onShow(){if(this.data.scene)this.refresh();},
+  onHide(){if(this.audio)this.audio.stop();},
+  onUnload(){if(this.audio)this.audio.destroy();},
+  refresh(){const state=store.read();const saved={};if(state)state.saved.forEach(id=>saved[id]=true);this.setData({saved});},
+  showRound(index,phraseIndex){if(this.audio)this.audio.stop();this.cursor=0;const line=this.data.scene.steps[index].phrases[phraseIndex];const passed=!!(this.roundPasses&&this.roundPasses.has(line.id));this.setData(Object.assign(practice.state(),{index,phraseIndex,round:index*2+phraseIndex+1,step:this.data.scene.steps[index],line,revealed:false,practice:passed,passed,answer:passed?line.target:'',feedback:passed?'本轮已拼对，可以左滑继续。':''}),()=>{if(wx.pageScrollTo)wx.pageScrollTo({scrollTop:0,duration:150});});},
+  start(){this.setData({started:true});this.play({currentTarget:{dataset:{kind:'prompt'}}});},
+  play(event){const kind=event.currentTarget.dataset.kind;const line=this.data.line;const src=kind==='prompt'?line.promptAudio:kind==='word'?line.practiceAudio:line.audio;this.audio.stop();wx.loadSubpackage({name:`voice-${this.data.scene.id}`,success:()=>{this.audio.src=src;this.audio.play();},fail:()=>wx.showToast({title:'发音资源加载失败，请重试',icon:'none'})});},
+  reveal(){this.setData({revealed:!this.data.revealed});},
+  save(){if(store.toggleSaved(this.data.line.id))this.refresh();},
+  saveWord(){if(store.toggleSaved(this.data.step.words[this.data.phraseIndex].id))this.refresh();},
+  practice(){this.cursor=0;this.setData(Object.assign(practice.state(),{practice:true,passed:false}));},
+  currentSpellingItem(){return this.data.line;},
+  spellingPassed(helped){if(!store.markSpelled(this.data.line.id,this.data.answer,helped))return;if(!this.roundPasses)this.roundPasses=new Set();this.roundPasses.add(this.data.line.id);this.setData({passed:true,feedback:helped?'拼写正确 ✓ 已加入易错词，稍后再巩固。':'拼写正确 ✓'});if(wx.hideKeyboard)wx.hideKeyboard();},
+  swipeStart(event){if(!this.data.started||this.data.finished||event.target&&event.target.dataset&&event.target.dataset.noswipe){this.swipe=null;return;}const touch=event.touches&&event.touches[0];this.swipe=touch?{x:touch.clientX,y:touch.clientY}:null;},
+  swipeEnd(event){if(!this.swipe)return;const touch=event.changedTouches&&event.changedTouches[0];const start=this.swipe;this.swipe=null;if(!touch)return;const dx=touch.clientX-start.x,dy=touch.clientY-start.y;if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.3)return;if(dx>0){this.previous();return;}if(this.data.passed)this.nextStep();else wx.showToast({title:'先拼对本轮表达，再左滑继续',icon:'none'});},
+  nextStep(){if(!this.data.passed)return;if(this.data.phraseIndex===0){this.showRound(this.data.index,1);return;}if(!store.learnStep(this.data.scene.id,this.data.index))return;if(this.data.index<2){this.showRound(this.data.index+1,0);return;}if(store.complete(this.data.scene.id)){this.setData({finished:true},()=>this.generatePoster());}},
+  previous(){if(this.data.round>1)this.showRound(this.data.phraseIndex===1?this.data.index:this.data.index-1,this.data.phraseIndex===1?0:1);},
+  culture(){this.setData({cultureOpen:!this.data.cultureOpen});},
+  async generatePoster(){if(this.data.posterBusy)return;const state=store.read();const ids=this.data.scene.steps.reduce((list,step)=>list.concat(step.phrases.map(item=>item.id)),[]);if(!state||!ids.every(id=>state.spelled.includes(id)))return;this.setData({posterBusy:true});try{const result=await poster.generate(this,this.data.scene);this.setData({posterPath:result.path,hasCode:result.hasCode});}catch(error){wx.showToast({title:'卡片生成失败，点击重试',icon:'none'});}finally{this.setData({posterBusy:false});}},
+  previewPoster(){if(this.data.posterPath)wx.previewImage({urls:[this.data.posterPath]});},
+  savePoster(){if(!this.data.posterPath)return;wx.saveImageToPhotosAlbum({filePath:this.data.posterPath,success:()=>wx.showToast({title:'已保存到相册',icon:'success'}),fail:()=>wx.showModal({title:'暂未保存',content:'请检查相册权限。也可以点开图片后长按保存。',confirmText:'查看权限',success:result=>{if(result.confirm)wx.openSetting({});}})});},
+  restart(){this.roundPasses=new Set();this.setData({finished:false,started:true,posterPath:''});this.showRound(0,0);},
+  goMap(){wx.switchTab({url:'/pages/home/home'});},
+  goReview(){wx.switchTab({url:'/pages/review/review'});},
+  onShareAppMessage(){const share=store.shareScene(this.data.scene.id);if(this.data.posterPath)share.imageUrl=this.data.posterPath;return share;}
+})));
+
+},
+"pages/saved/saved.js": function(require,module,exports){
+const feedback=require('../../utils/feedback');
+const {items} = require('../../utils/content');
+const store = require('../../utils/store');
+Page(feedback.withSounds({
+  data: {filter: 'all', items: [], count: 0},
+  onShow() { this.refresh(); },
+  refresh() {
+    const state = store.read();
+    const saved = state ? items.filter(item => state.saved.includes(item.id)) : [];
+    this.setData({count: saved.length, items: saved.filter(item => this.data.filter === 'all' || item.type === this.data.filter)});
+  },
+  filter(event) { this.setData({filter: event.currentTarget.dataset.type}); this.refresh(); },
+  remove(event) { if (store.toggleSaved(event.currentTarget.dataset.id)) this.refresh(); },
+  openScene(event) { wx.navigateTo({url: `/pages/scene/scene?id=${event.currentTarget.dataset.scene}`}); },
+  goMap() { wx.switchTab({url: '/pages/home/home'}); },
+  onShareAppMessage() { return store.shareHome(); }
+}));
+
+},
+"pages/review/review.js": function(require,module,exports){
+const feedback=require('../../utils/feedback');
+const store=require('../../utils/store');
+const practice=require('../../utils/spelling-practice');
+Page(feedback.withSounds(Object.assign({},practice.methods,{
+  data:Object.assign(practice.state(),{item:null,total:0,done:0,started:false,remaining:0,difficultCount:0,checked:false,correct:false,hint:false,accents:['é','è','ê','à','ç','ù','ô','î','ï','’']}),
+  onShow(){this.queue=[];const state=store.read();this.setData({item:null,started:false,done:0,remaining:store.due(state).length,difficultCount:store.difficult(state).length});},
+  start(event){const hard=event&&event.currentTarget&&event.currentTarget.dataset.mode==='difficult';const state=store.read();this.queue=hard?store.difficult(state):store.due(state);this.setData({started:true,total:this.queue.length,done:0});this.showItem();},
+  showItem(){this.cursor=0;this.setData(Object.assign(practice.state(),{item:this.queue[0]||null,checked:false,correct:false,hint:false,difficultCount:store.difficult(store.read()).length}));},
+  currentSpellingItem(){return this.data.item;},
+  spellingPassed(helped){if(!store.succeed(this.data.item.id,helped||this.data.hint))return;this.setData({correct:true,checked:true,feedback:helped||this.data.hint?'拼写正确 ✓ 稍后再巩固一次。':'拼写正确 ✓'});},
+  hint(){if(!store.recordMistake(this.data.item.id,this.data.answer,true))return;this.setData({hint:true,usedHelp:true,feedback:`首字母：${this.data.item.target[0]} · 共 ${this.data.item.target.length} 个字符`});},
+  reveal(){this.seeWord();},
+  skip(){if(!this.data.item||!store.recordMistake(this.data.item.id,this.data.answer,true))return;this.setData({checked:true,correct:false,hint:true});this.next();},
+  next(){if(!this.data.item||!this.data.checked)return;if(!store.rate(this.data.item.id,this.data.correct&&!this.data.hint&&!this.data.usedHelp))return;this.queue.shift();this.setData({done:this.data.done+1});this.showItem();},
+  goMap(){wx.switchTab({url:'/pages/home/home'});},
+  onShareAppMessage(){return store.shareHome();}
+})));
+
+}};
+const templates = {"home":"<view class=\"page short-page\">\n  <view class=\"eyebrow\">MIMO À PARIS · 日常法语</view><view class=\"title\">今天想去哪里？</view>\n  <view class=\"guide compact-guide\"><view class=\"cat\"><view class=\"ear left\"></view><view class=\"ear right\"></view><view class=\"face\">• ᴗ •</view><view class=\"scarf\"></view></view><view class=\"guide-copy\"><view class=\"bold\">拖动地图，和 Mimo 去散步。</view><view>已完成 {{completed}} / {{scenes.length}} 个场景</view></view><button size=\"mini\" class=\"sound-toggle\" bindtap=\"toggleSound\" aria-label=\"{{soundEnabled ? '关闭点击音效' : '开启点击音效'}}\">{{soundEnabled ? '♪' : '静音'}}</button></view>\n  <view class=\"explore-shell\">\n    <movable-area class=\"map-window\">\n      <movable-view class=\"map-mover\" style=\"width:{{1800 * zoom}}rpx;height:{{1500 * zoom}}rpx\" direction=\"all\" x=\"{{mapX}}\" y=\"{{mapY}}\" inertia=\"{{true}}\" damping=\"35\" friction=\"4\" animation=\"{{false}}\" bindchange=\"onMapChange\" bindtouchstart=\"touchStart\" bindtouchmove=\"touchMove\">\n        <view class=\"paris-world\" style=\"transform:scale({{zoom}})\">\n          <view class=\"city-park garden-one\"></view><view class=\"city-park garden-two\"></view><view class=\"city-park garden-three\"></view>\n          <view class=\"city-block\" wx:for=\"{{blocks}}\" wx:key=\"index\" style=\"left:{{item.x}}rpx;top:{{item.y}}rpx\"></view>\n          <view class=\"avenue avenue-one\"></view><view class=\"avenue avenue-two\"></view><view class=\"avenue avenue-three\"></view><view class=\"avenue avenue-four\"></view><view class=\"avenue avenue-five\"></view>\n          <view class=\"city-seine\"></view><view class=\"seine-name\">La Seine</view><view class=\"city-bridge bridge-one\"></view><view class=\"city-bridge bridge-two\"></view>\n          <view class=\"district district-one\">SAINT-GERMAIN</view><view class=\"district district-two\">LE MARAIS</view><view class=\"district district-three\">MONTPARNASSE</view>\n          <view class=\"city-tower\"><view class=\"eiffel\"><view class=\"eiffel-deck\"></view><view class=\"eiffel-leg leg-left\"></view><view class=\"eiffel-leg leg-right\"></view></view><text>Tour Eiffel</text></view>\n          <button wx:for=\"{{scenes}}\" wx:key=\"id\" class=\"map-pin city-pin {{item.done ? 'done-pin' : ''}}\" style=\"left:{{item.x}}rpx;top:{{item.y}}rpx\" data-id=\"{{item.id}}\" bindtap=\"openScene\" aria-label=\"{{item.title}}\"><view class=\"pin-icon\">{{item.icon}}</view><view>{{item.title}}</view><view class=\"pin-state\">{{item.done ? '✓ 已收获自拍' : '开始对话'}}</view></button>\n          <view class=\"walking-cat\" style=\"left:{{catX}}rpx;top:{{catY}}rpx\"><view class=\"cat\"><view class=\"ear left\"></view><view class=\"ear right\"></view><view class=\"face\">• ᴗ •</view><view class=\"scarf\"></view></view><text>Mimo</text></view>\n        </view>\n      </movable-view>\n    </movable-area>\n    <view class=\"map-badge\">PARIS <text>探索地图</text></view><view class=\"map-compass\">N ↑</view>\n    <view class=\"map-tools\"><button size=\"mini\" class=\"map-tool\" data-delta=\"0.2\" bindtap=\"zoom\" aria-label=\"放大地图\">＋</button><button size=\"mini\" class=\"map-tool\" data-delta=\"-0.2\" bindtap=\"zoom\" aria-label=\"缩小地图\">－</button><button size=\"mini\" class=\"map-tool locate-tool\" bindtap=\"locateCat\" aria-label=\"回到小猫位置\">🐾</button></view>\n    <button size=\"mini\" class=\"find-place\" bindtap=\"togglePlaces\">{{placesOpen ? '收起地点' : '找地点 ⌄'}}</button>\n    <view wx:if=\"{{placesOpen}}\" class=\"places-menu\"><button wx:for=\"{{scenes}}\" wx:key=\"id\" data-id=\"{{item.id}}\" bindtap=\"findScene\">{{item.icon}} {{item.title}}</button></view>\n  </view>\n  <view class=\"map-gesture-hint\">按住拖动 · 点击地点开始对话</view>\n  <view class=\"inline-actions\"><button class=\"primary\" bindtap=\"goReview\">拼写练习 · {{due}}</button><button class=\"secondary\" open-type=\"share\">邀请朋友 ↗</button></view>\n</view>\n","scene":"<view class=\"page short-page scene-page\" wx:if=\"{{scene}}\">\r\n  <view class=\"scene-background\"><image class=\"scene-background-image\" src=\"{{scene.background}}\" mode=\"aspectFill\"></image><view class=\"scene-background-wash\"></view></view>\r\n  <view class=\"scene-content\" bindtouchstart=\"swipeStart\" bindtouchend=\"swipeEnd\">\r\n  <block wx:if=\"{{finished}}\">\r\n    <view class=\"section-title\">6 轮表达，全部拼对啦！</view>\r\n    <image wx:if=\"{{posterPath}}\" class=\"poster-image\" src=\"{{posterPath}}\" mode=\"widthFix\" bindtap=\"previewPoster\"></image>\r\n    <view wx:else class=\"poster-loading\">{{posterBusy ? 'Mimo 正在拍自拍…' : '卡片尚未生成'}}<button wx:if=\"{{!posterBusy}}\" class=\"secondary\" bindtap=\"generatePoster\">重新生成卡片</button></view>\r\n    <view class=\"tiny muted\">{{hasCode ? '扫码可在浏览器中进入这个场景。' : '可以保存自拍，或分享链接邀请朋友。'}}</view>\r\n    <view class=\"inline-actions\"><button class=\"primary\" disabled=\"{{!posterPath}}\" bindtap=\"savePoster\">保存自拍</button><button class=\"secondary\" open-type=\"share\">分享场景</button></view>\r\n    <view class=\"inline-actions\"><button class=\"text-button\" bindtap=\"goMap\">回地图</button><button class=\"text-button\" bindtap=\"goReview\">练练拼写</button><button class=\"text-button\" bindtap=\"restart\">重温对话</button></view>\r\n    <canvas type=\"2d\" id=\"posterCanvas\" class=\"poster-canvas\"></canvas>\r\n  </block>\r\n  <block wx:elif=\"{{!started}}\">\r\n    <view class=\"scene-arrival\"><view class=\"arrival-place\">{{scene.place}}</view><view class=\"arrival-cat\"><view class=\"cat\"><view class=\"ear left\"></view><view class=\"ear right\"></view><view class=\"face\">• ᴗ •</view><view class=\"scarf\"></view></view></view></view>\r\n    <view class=\"arrival-copy\"><view class=\"title\">{{scene.icon}} {{scene.title}}</view><view class=\"subtitle\">{{scene.description}}</view><view class=\"muted\">和{{scene.speaker}}聊 6 轮，练习单词与完整短语，收获一张自拍。</view><button class=\"primary\" bindtap=\"start\">开始对话 →</button></view>\r\n  </block>\r\n  <block wx:else>\r\n    <view class=\"section-head compact-head\"><view class=\"section-title\">{{scene.icon}} {{scene.title}}</view><text class=\"muted\">{{round}} / 6 轮</text></view>\r\n    <view class=\"round-progress\"><view style=\"width:{{round * 100 / 6}}%\"></view></view>\r\n    <view wx:if=\"{{!rescue}}\" class=\"dialogue other\"><view class=\"speaker\">{{scene.speaker}}<button class=\"sound\" data-kind=\"prompt\" bindtap=\"play\">▶ 发音</button></view><view class=\"french\">{{line.prompt}}</view><view wx:if=\"{{revealed}}\" class=\"translation\">{{line.promptZh}}</view></view>\r\n    <view class=\"dialogue mimo\"><view class=\"speaker\">🐱 Mimo<button class=\"sound\" data-kind=\"reply\" bindtap=\"play\">▶ 发音</button><button class=\"save-button\" bindtap=\"save\" aria-label=\"收藏句子\">{{saved[line.id] ? '★' : '☆'}}</button></view><view wx:if=\"{{!practice}}\" class=\"french\">{{line.fr}}</view><view wx:else class=\"cloze\">{{line.before}}<text class=\"blank\">_____</text>{{line.after}}</view><view class=\"translation\">{{practice || revealed ? line.zh : '点击下方查看中文'}}</view></view>\r\n    <view wx:if=\"{{!practice}}\" class=\"inline-actions\"><button class=\"text-button\" bindtap=\"reveal\">{{revealed ? '隐藏中文' : '查看中文意思'}}</button><button class=\"text-button\" data-kind=\"word\" bindtap=\"play\">▶ {{line.target}}</button><button class=\"text-button\" bindtap=\"saveWord\">{{saved[step.words[phraseIndex].id] ? '★ ' : '☆ '}}{{step.words[phraseIndex].fr}}</button></view>\r\n    <button wx:if=\"{{!practice}}\" class=\"primary\" bindtap=\"practice\">{{line.practiceKind === 'phrase' ? '练习短语拼写' : '练习关键词拼写'}} · {{line.targetZh}}</button>\r\n    <view wx:else class=\"spell-panel\">\r\n      <view class=\"muted\">{{line.practiceKind === 'phrase' ? '完整拼出这段表达' : '填入缺失单词'}}：{{line.targetZh}}</view>\r\n      <view wx:if=\"{{rescue}}\" class=\"word-rescue\"><view class=\"rescue-heading\">{{rescue === 'observe' ? '一起把这个词记住' : '看着词，跟写一遍'}}</view><view class=\"rescue-word\">{{line.target}}</view><view class=\"memory-parts\"><text wx:for=\"{{line.study.parts}}\" wx:key=\"index\">{{item}}</text></view><view class=\"memory-tip\">{{line.study.tip}}</view><view wx:if=\"{{rescue === 'observe' && previousAnswer}}\"><view class=\"tiny\">你的输入：{{previousAnswer}}</view><view class=\"letter-comparison\"><view wx:for=\"{{comparison}}\" wx:key=\"index\" class=\"letter-check {{item.wrong ? 'wrong-letter' : ''}}\"><text>{{item.letter}}</text><text class=\"letter-state\">{{item.wrong ? '≠ ' + item.typed : '✓'}}</text></view></view></view><view class=\"tiny muted\">{{line.study.sourceLabel}}</view><button wx:if=\"{{rescue === 'observe'}}\" class=\"secondary\" bindtap=\"copyWord\">跟着拼一遍</button></view>\r\n      <block wx:if=\"{{rescue !== 'observe'}}\"><input class=\"spell-input\" data-noswipe=\"true\" value=\"{{answer}}\" bindinput=\"input\" bindblur=\"rememberCursor\" placeholder=\"{{line.practiceKind === 'phrase' ? '填写完整短语，保留空格和重音' : '只填写单词，注意重音'}}\" confirm-type=\"done\" bindconfirm=\"check\" maxlength=\"80\" disabled=\"{{passed}}\" adjust-position=\"true\"></input><view wx:if=\"{{!passed}}\" class=\"accent-row\"><button wx:for=\"{{accents}}\" wx:key=\"*this\" data-char=\"{{item}}\" bindtap=\"accent\">{{item}}</button></view></block>\r\n      <view class=\"spell-feedback\">{{feedback}}</view><button wx:if=\"{{!passed && rescue !== 'observe'}}\" class=\"primary\" bindtap=\"check\">检查拼写</button><button wx:if=\"{{passed}}\" class=\"primary\" bindtap=\"nextStep\">{{round === 6 ? '完成学习，生成自拍 →' : '下一轮对话 →'}}</button><button wx:if=\"{{attempts > 0 && !rescue && !passed}}\" class=\"text-button\" bindtap=\"seeWord\">看词并重新记忆</button>\r\n      <view wx:if=\"{{passed}}\" class=\"swipe-hint\">← 左滑继续 · 右滑回看 →</view>\r\n    </view>\r\n    <view class=\"inline-actions\"><button wx:if=\"{{round > 1}}\" class=\"text-button\" bindtap=\"previous\">上一轮</button><button class=\"text-button\" bindtap=\"toggleStudy\">{{studyOpen ? '收起词卡' : '词卡'}}</button><button class=\"text-button\" bindtap=\"culture\">{{cultureOpen ? '收起' : '一口巴黎'}}</button><button class=\"text-button\" open-type=\"share\">分享</button></view>\r\n    <view wx:if=\"{{studyOpen}}\" class=\"study-note\"><view class=\"bold\">{{line.study.label}}</view><view>{{line.study.tip}}</view><view class=\"tiny muted\">{{line.study.sourceLabel}}</view></view>\r\n    <view wx:if=\"{{cultureOpen}}\" class=\"culture\">{{scene.culture}}</view>\r\n  </block>\r\n  </view>\r\n</view>\r\n","saved":"<view class=\"page\">\n  <view class=\"title\">我的手记</view><view class=\"subtitle\">已收藏 {{count}} 个词句 · 记录保存在本机</view>\n  <view class=\"filters\"><button class=\"filter {{filter === 'all' ? 'active' : ''}}\" data-type=\"all\" bindtap=\"filter\">全部</button><button class=\"filter {{filter === 'phrases' ? 'active' : ''}}\" data-type=\"phrases\" bindtap=\"filter\">句子</button><button class=\"filter {{filter === 'words' ? 'active' : ''}}\" data-type=\"words\" bindtap=\"filter\">单词</button></view>\n  <view wx:if=\"{{!items.length}}\" class=\"empty\"><view class=\"big-icon\">📒</view><view class=\"section-title\">{{count ? '这个分类还没有收藏' : '手记还是空白的'}}</view><view class=\"subtitle\">在剧情里点一下 ☆，就能把词句留下来。</view><button class=\"primary\" bindtap=\"goMap\">去地图探索</button></view>\n  <view class=\"phrase-card\" wx:for=\"{{items}}\" wx:key=\"id\"><view class=\"phrase-top\"><view class=\"french\">{{item.fr}}</view><button class=\"save-button\" data-id=\"{{item.id}}\" bindtap=\"remove\" aria-label=\"取消收藏\">★</button></view><view class=\"translation\">{{item.zh}}</view><view class=\"muted\">{{item.note || item.hint}}</view><button class=\"source-button\" data-scene=\"{{item.sceneId}}\" bindtap=\"openScene\">{{item.icon}} {{item.sceneTitle}} →</button></view>\n</view>\n","review":"<view class=\"page short-page\">\r\n  <view class=\"title\">拼写练习</view>\r\n  <view wx:if=\"{{!started}}\" class=\"card\"><view class=\"review-number\">{{remaining}}</view><view class=\"subtitle\">待练习的句子和单词</view><button wx:if=\"{{remaining > 0}}\" class=\"primary\" bindtap=\"start\">开始拼写 →</button><button wx:else class=\"primary\" bindtap=\"goMap\">去地图学新表达</button><button wx:if=\"{{difficultCount > 0}}\" class=\"secondary\" data-mode=\"difficult\" bindtap=\"start\">专练易错词 · {{difficultCount}}</button><view class=\"tiny muted\">拼错会给具体提示。易错词独立拼对两次后移出；借助提示的词稍后再练。</view></view>\r\n  <block wx:elif=\"{{item}}\"><view class=\"section-head\"><view class=\"section-title\">{{item.icon}} {{item.sceneTitle}}</view><text class=\"muted\">{{done + 1}} / {{total}}</text></view>\r\n    <view class=\"dialogue\"><view class=\"muted\">{{item.practiceKind === 'phrase' ? '完整拼出句子中缺失的短语' : item.type === 'phrases' ? '填入句子中缺失的单词' : '根据词义，拼出关键词'}}</view><view class=\"cloze\">{{item.type === 'phrases' ? item.before : ''}}<text class=\"blank\">_____</text>{{item.type === 'phrases' ? item.after : ''}}</view><view class=\"translation\">{{item.zh}}</view></view>\r\n    <view class=\"spell-panel\"><view class=\"muted\">词义：{{item.targetZh}}</view>\r\n      <view wx:if=\"{{rescue}}\" class=\"word-rescue\"><view class=\"rescue-heading\">{{rescue === 'observe' ? '一起把这个词记住' : '看着词，跟写一遍'}}</view><view class=\"rescue-word\">{{item.target}}</view><view class=\"memory-parts\"><text wx:for=\"{{item.study.parts}}\" wx:key=\"index\">{{item}}</text></view><view class=\"memory-tip\">{{item.study.tip}}</view><view wx:if=\"{{rescue === 'observe' && previousAnswer}}\"><view class=\"tiny\">你的输入：{{previousAnswer}}</view><view class=\"letter-comparison\"><view wx:for=\"{{comparison}}\" wx:key=\"index\" class=\"letter-check {{item.wrong ? 'wrong-letter' : ''}}\"><text>{{item.letter}}</text><text class=\"letter-state\">{{item.wrong ? '≠ ' + item.typed : '✓'}}</text></view></view></view><button wx:if=\"{{rescue === 'observe'}}\" class=\"secondary\" bindtap=\"copyWord\">跟着拼一遍</button></view>\r\n      <block wx:if=\"{{rescue !== 'observe'}}\"><input class=\"spell-input\" value=\"{{answer}}\" bindinput=\"input\" bindblur=\"rememberCursor\" bindconfirm=\"check\" placeholder=\"输入缺失的单词或短语\" confirm-type=\"done\" maxlength=\"80\" disabled=\"{{checked}}\"></input><view wx:if=\"{{!checked}}\" class=\"accent-row\"><button wx:for=\"{{accents}}\" wx:key=\"*this\" data-char=\"{{item}}\" bindtap=\"accent\">{{item}}</button></view></block>\r\n      <view class=\"spell-feedback\">{{feedback}}</view><button wx:if=\"{{!checked && rescue !== 'observe'}}\" class=\"primary\" bindtap=\"check\">检查拼写</button><button wx:if=\"{{checked}}\" class=\"primary\" bindtap=\"next\">下一个 →</button>\r\n    </view>\r\n    <view wx:if=\"{{!checked}}\" class=\"inline-actions\"><button class=\"text-button\" bindtap=\"hint\">提示首字母</button><button class=\"text-button\" bindtap=\"reveal\">看词记忆</button><button class=\"text-button\" bindtap=\"skip\">稍后再练</button></view>\r\n    <button class=\"text-button\" bindtap=\"toggleStudy\">{{studyOpen ? '收起词卡' : '词卡'}}</button><view wx:if=\"{{studyOpen}}\" class=\"study-note\"><view class=\"bold\">{{item.study.label}}</view><view>{{item.study.tip}}</view><view class=\"tiny muted\">{{item.study.sourceLabel}}</view></view>\r\n  </block>\r\n  <view wx:else class=\"empty\"><view class=\"big-icon\">🐾</view><view class=\"section-title\">本轮练习 {{done}} 张卡。</view><view class=\"subtitle\">{{difficultCount > 0 ? '还有易错词，可以专门再练一轮。' : '这一轮易错词已巩固，之后按复习计划再见。'}}</view><button wx:if=\"{{difficultCount > 0}}\" class=\"secondary\" data-mode=\"difficult\" bindtap=\"start\">专练易错词 · {{difficultCount}}</button><button class=\"primary\" bindtap=\"goMap\">回巴黎地图</button></view>\r\n</view>\r\n"};
+const cache = {};
+let current, homePage, route='home', toastTimer;
+function notify(message){const node=document.getElementById('toast');node.textContent=message;node.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>node.style.display='none',4500);}
+function load(file){if(cache[file])return cache[file].exports;const module={exports:{}};cache[file]=module;const directory=file.split('/').slice(0,-1);const require=(request)=>{const parts=directory.slice();request.split('/').forEach(part=>{if(part==='..')parts.pop();else if(part!=='.')parts.push(part)});const key=parts.join('/');return load(key.endsWith('.js')?key:key+'.js')};modules[file](require,module,module.exports);return module.exports;}
+window.Page=config=>{current=Object.assign({},config,{data:JSON.parse(JSON.stringify(config.data)),setData(values,callback){Object.assign(this.data,values);render();if(callback)callback();}})};
+window.wx={pageScrollTo(){document.getElementById("screen").scrollTo({top:0,behavior:"smooth"})},hideKeyboard(){if(document.activeElement instanceof HTMLInputElement)document.activeElement.blur()},getStorageSync:key=>{const value=localStorage.getItem('mimo-web-'+key);return value?JSON.parse(value):''},setStorageSync:(key,value)=>localStorage.setItem('mimo-web-'+key,JSON.stringify(value)),showToast:({title})=>notify(title),hideToast:()=>{document.getElementById('toast').style.display='none'},setNavigationBarTitle:({title})=>document.getElementById('title').textContent=title,navigateTo:({url})=>navigate(url),redirectTo:({url})=>navigate(url),switchTab:({url})=>navigate(url),loadSubpackage:({success})=>success(),createInnerAudioContext(){const audio=new Audio();return {set src(value){audio.src='miniprogram'+value},play(){audio.play().catch(error=>{if(error.name!=='AbortError')notify('发音暂未播放，请再点一次发音按钮')})},stop(){audio.pause();audio.currentTime=0},destroy(){audio.pause();audio.onerror=null;audio.removeAttribute('src');audio.load()},onError(callback){audio.onerror=callback}}},createSelectorQuery(){const query={in(){return query},select(id){query.id=id;return query},fields(){return query},exec(callback){const node=document.querySelector(query.id);if(node)node.createImage=()=>new Image();callback([{node}])}};return query},canvasToTempFilePath({canvas,success}){success({tempFilePath:canvas.toDataURL('image/png')})},previewImage({urls}){const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:#213528d9;display:flex;align-items:center;justify-content:center;z-index:200;cursor:pointer';const image=new Image();image.src=urls[0];image.style.cssText='max-height:90vh;max-width:90vw;border-radius:16px';overlay.appendChild(image);overlay.onclick=()=>overlay.remove();document.body.appendChild(overlay)},saveImageToPhotosAlbum({filePath,success}){const link=document.createElement('a');link.href=filePath;link.download='Mimo-'+current.data.scene.id+'-自拍.png';link.click();success()},showModal({content}){notify(content)},openSetting(){notify('请在微信中设置相册权限')}};
+function evaluate(expression,scope){try{return Function(...Object.keys(scope),'return ('+expression+')')(...Object.values(scope))}catch(error){return ''}}
+function value(text,scope){const match=text.match(/^{{([^{}]*?)}}$/);return match?evaluate(match[1],scope):text.replace(/{{([\s\S]*?)}}/g,(_,expr)=>{const v=evaluate(expr,scope);return v==null?'':String(v)})}
+function children(source,target,scope){let chain=false,taken=false;for(const node of source.childNodes){if(node.nodeType===3){target.appendChild(document.createTextNode(value(node.textContent,scope)));continue}if(node.nodeType!==1)continue;const cond=node.getAttribute('wx:if'),alt=node.getAttribute('wx:elif'),otherwise=node.hasAttribute('wx:else');if(cond!==null){chain=true;taken=!!value(cond,scope);if(!taken)continue}else if(alt!==null){if(!chain||taken)continue;taken=!!value(alt,scope);if(!taken)continue}else if(otherwise){if(!chain||taken)continue;taken=true}else{chain=false;taken=false}const loop=node.getAttribute('wx:for');if(loop!==null){const list=value(loop,scope);if(Array.isArray(list))list.forEach((item,index)=>element(node,target,Object.assign({},scope,{item,index})));}else element(node,target,scope);}}
+function element(source,target,scope){const tag=source.tagName.toLowerCase();const element=document.createElement(['button','input','canvas'].includes(tag)?tag:(tag==='image'||tag==='img')?'img':tag==='text'?'span':'div');if(tag==='block')element.className='block';for(const attribute of source.attributes){if(attribute.name.startsWith('wx:')||attribute.name.startsWith('bind')||attribute.name==='open-type')continue;let resolved=value(attribute.value,scope);if(attribute.name==='src'&&typeof resolved==='string'&&resolved.startsWith('/assets/'))resolved='miniprogram'+resolved;if(attribute.name==='style')resolved=String(resolved).replace(/(-?\d*\.?\d+)rpx/g,(_,n)=>Number(n)/2+'px');if(attribute.name==='disabled'){element.disabled=!!resolved;continue;}element.setAttribute(attribute.name,resolved)}const handler=source.getAttribute('bindtap');if(handler)element.addEventListener('click',event=>{event.stopPropagation();current[handler]({currentTarget:{dataset:element.dataset}})});const input=source.getAttribute('bindinput');if(input)element.addEventListener('input',()=>current[input]({detail:{value:element.value,cursor:element.selectionStart}}));const blur=source.getAttribute('bindblur');if(blur)element.addEventListener('blur',()=>current[blur]&&current[blur]({detail:{value:element.value,cursor:element.selectionStart}}));const confirm=source.getAttribute('bindconfirm');if(confirm)element.addEventListener('keydown',event=>{if(event.key==='Enter')current[confirm]()});if(source.getAttribute('open-type')==='share')element.addEventListener('click',showShare);children(source,element,scope);target.appendChild(element);}
+// 浏览器预览对微信 movable-area / movable-view 的轻量适配。
+function setupMap(){
+ const area=document.querySelector('.map-window');const mover=document.querySelector('.map-mover');if(!area||!mover)return;
+ const position=current.position||{x:current.data.mapX,y:current.data.mapY};
+ const apply=(x,y)=>{const point={x:Math.min(0,Math.max(area.clientWidth-mover.offsetWidth,x)),y:Math.min(0,Math.max(area.clientHeight-mover.offsetHeight,y))};mover.style.transform='translate('+point.x+'px,'+point.y+'px)';current.onMapChange({detail:point});};
+ apply(position.x,position.y);let drag=null;let suppressUntil=0;
+ area.style.cursor='grab';
+ area.addEventListener('pointerdown',event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,base:{...current.position},moved:false};});
+ area.addEventListener('pointermove',event=>{if(!drag||drag.id!==event.pointerId)return;const dx=event.clientX-drag.x,dy=event.clientY-drag.y;if(Math.hypot(dx,dy)>7){drag.moved=true;area.setPointerCapture(event.pointerId);area.style.cursor='grabbing';}if(drag.moved){event.preventDefault();apply(drag.base.x+dx,drag.base.y+dy);}});
+ const end=event=>{if(!drag||drag.id!==event.pointerId)return;if(drag.moved)suppressUntil=performance.now()+300;drag=null;area.style.cursor='grab';if(area.hasPointerCapture(event.pointerId))area.releasePointerCapture(event.pointerId);};
+ area.addEventListener('pointerup',end);area.addEventListener('pointercancel',end);
+ area.addEventListener('click',event=>{if(performance.now()<suppressUntil){event.preventDefault();event.stopImmediatePropagation();}},true);
+ area.addEventListener('wheel',event=>{event.preventDefault();current.zoom({currentTarget:{dataset:{delta:event.deltaY<0?.2:-.2}}});},{passive:false});
+}
+let suppressSceneTapUntil=0;
+function setupSceneSwipe(){
+ const root=document.querySelector('.scene-content');if(!root)return;
+ const screen=document.getElementById('screen');if(!screen.dataset.swipeGuard){screen.dataset.swipeGuard='1';screen.addEventListener('click',event=>{if(Date.now()<suppressSceneTapUntil){event.preventDefault();event.stopImmediatePropagation();}},true);}
+ root.style.touchAction='pan-y';let start=null;
+ root.addEventListener('pointerdown',event=>{if(event.button!==0||event.target.closest('input'))return;start={x:event.clientX,y:event.clientY,id:event.pointerId};current.swipeStart({touches:[{clientX:event.clientX,clientY:event.clientY}],target:{dataset:event.target.dataset||{}}});});
+ root.addEventListener('pointermove',event=>{if(!start||event.pointerId!==start.id)return;if(Math.abs(event.clientX-start.x)>14&&Math.abs(event.clientX-start.x)>Math.abs(event.clientY-start.y)*1.3)root.setPointerCapture(event.pointerId);});
+ root.addEventListener('pointerup',event=>{if(!start||event.pointerId!==start.id)return;const dx=event.clientX-start.x,dy=event.clientY-start.y;if(Math.abs(dx)>=60&&Math.abs(dx)>Math.abs(dy)*1.3)suppressSceneTapUntil=Date.now()+300;if(root.hasPointerCapture(event.pointerId))root.releasePointerCapture(event.pointerId);start=null;current.swipeEnd({changedTouches:[{clientX:event.clientX,clientY:event.clientY}]});});
+ root.addEventListener('pointercancel',()=>{start=null;current.swipe=null;});
+}
+
+function render(){if(!current)return;const active=document.activeElement;const focused=active&&active.classList.contains('spell-input');const start=focused?active.selectionStart:0;const doc=new DOMParser().parseFromString(templates[route],'text/html');const fragment=document.createDocumentFragment();children(doc.body,fragment,current.data);document.getElementById('screen').replaceChildren(fragment);setupMap();setupSceneSwipe();if(focused){const input=document.querySelector('.spell-input');if(input&&!input.disabled){input.focus();input.setSelectionRange(start,start)}}document.querySelectorAll('.tabs button').forEach(button=>button.classList.toggle('selected',button.dataset.page===route));document.getElementById('back').style.visibility=route==='scene'?'visible':'hidden';}
+function navigate(url){if(current&&route==='home')homePage=current;if(current&&current.onUnload)current.onUnload();const match=url.match(/pages\/(\w+)\/\w+/);route=match?match[1]:'home';const params=Object.fromEntries(new URLSearchParams(url.split('?')[1]||''));const file='pages/'+route+'/'+route+'.js';document.getElementById('title').textContent='Mimo在巴黎散步的天';if(route==='home'&&homePage){current=homePage;}else{delete cache[file];load(file);if(current.onLoad)current.onLoad(params);}if(current.onShow)current.onShow();render();document.getElementById('screen').scrollTop=0;}
+async function showShare(){const url=new URL(location.href);url.search='';url.hash='';if(route==='scene'&&current.data.scene)url.searchParams.set('scene',current.data.scene.id);const title='Mimo在巴黎散步的天';try{if(navigator.share){await navigator.share({title,text:'和小猫一起在巴黎学法语',url:url.href});}else if(navigator.clipboard&&location.protocol!=='file:'){await navigator.clipboard.writeText(url.href);notify('链接已复制，可以发给朋友');}else{prompt('复制链接，和朋友一起散步',url.href);}}catch(error){if(error.name!=='AbortError')notify('请复制地址栏中的链接分享');}}
+document.querySelectorAll('.tabs button').forEach(button=>button.onclick=()=>{load('utils/feedback.js').play();navigate('/pages/'+button.dataset.page+'/'+button.dataset.page)});document.getElementById('back').onclick=()=>navigate('/pages/home/home');document.getElementById('share').onclick=showShare;navigate('/pages/home/home');const entry=new URLSearchParams(location.search).get('scene');if(entry&&load('utils/content.js').scenes.some(s=>s.id===entry))navigate('/pages/scene/scene?id='+entry);
+</script></html>
